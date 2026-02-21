@@ -23,7 +23,7 @@ export function parseRecommendations(fc: any): Recommendation[] {
       lng: f.geometry.coordinates[0],
       site_id: f.properties.site_id ?? '',
       node_weight: Number(f.properties.node_weight ?? 0),
-      marginal_gain: Number(f.properties.marginal_gain ?? 0),
+      marginal_gain: Number(f.properties.marginal_demand_gain ?? f.properties.marginal_gain ?? 0),
       reasoning: f.properties.reasoning,
     }));
 }
@@ -36,6 +36,6 @@ export function parseClusters(fc: any): ClusterFeature[] {
       lat: f.geometry.coordinates[1],
       lng: f.geometry.coordinates[0],
       community_id: f.properties.community_id ?? 0,
-      is_underserved: Boolean(f.properties.is_underserved),
+      is_underserved: Boolean(f.properties.is_underserved ?? f.properties.underserved ?? false),
     }));
 }
