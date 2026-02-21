@@ -35,6 +35,7 @@ class Config:
     service_radius_km: float = 2.5
     density_radius_km: float = 2.0
     underserved_distance_km: float = 2.2
+    min_uncovered_ratio: float = 0.15
     smoothing_alpha: float = 0.70
     smoothing_iters: int = 2
     ridge_lambda: float = 0.05
@@ -73,6 +74,80 @@ def min_max_scale(values: List[float]) -> List[float]:
 def read_csv_rows(path: Path) -> List[Dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
+
+
+def _feature_centroid_lat_lon(feature: Dict) -> Tuple[float, float] | None:
+    geometry = feature.get("geometry") or {}
+    gtype = geometry.get("type")
+    coords = geometry.get("coordinates")
+    if not coords:
+        return None
+
+    points: List[Tuple[float, float]] = []
+    if gtype == "Polygon":
+        ring = coords[0] if coords else []
+        points = [(float(x), float(y)) for x, y in ring]
+    elif gtype == "MultiPolygon":
+        for poly in coords:
+            if not poly:
+                continue
+            ring = poly[0] if poly else []
+            points.extend((float(x), float(y)) for x, y in ring)
+    elif gtype == "Point":
+        points = [(float(coords[0]), float(coords[1]))]
+
+    if not points:
+        return None
+
+    lon = sum(p[0] for p in points) / len(points)
+    lat = sum(p[1] for p in points) / len(points)
+    return lat, lon
+
+
+def load_npa_candidates(data_dir: Path, config: Config) -> List[Dict]:
+    npa_path = data_dir / "austin_npa.geojson"
+    if not npa_path.exists():
+        return []
+
+    with npa_path.open("r", encoding="utf-8") as f:
+        geo = json.load(f)
+
+    features = geo.get("features", [])
+    raw_pop: List[float] = []
+    rows: List[Tuple[Dict, float, Tuple[float, float]]] = []
+    for feat in features:
+        props = feat.get("properties") or {}
+        centroid = _feature_centroid_lat_lon(feat)
+        if centroid is None:
+            continue
+        pop = float(props.get("population", 0) or 0)
+        raw_pop.append(pop)
+        rows.append((props, pop, centroid))
+
+    if not rows:
+        return []
+
+    pop_scaled = min_max_scale(raw_pop)
+    rng = random.Random(config.rng_seed)
+    candidates: List[Dict] = []
+    for i, (props, _pop, (lat, lon)) in enumerate(rows):
+        p = pop_scaled[i]
+        traffic = max(5.0, min(100.0, 40.0 + 60.0 * p + rng.uniform(-8.0, 8.0)))
+        parking = max(5.0, min(100.0, 80.0 - 25.0 * p + rng.uniform(-10.0, 10.0)))
+        demand = max(5.0, min(100.0, 35.0 + 65.0 * p + rng.uniform(-6.0, 6.0)))
+        candidates.append(
+            {
+                "site_id": f"NPA_{props.get('OBJECTID', i)}",
+                "lat": lat,
+                "lon": lon,
+                "population_score": p,
+                "traffic_score": traffic,
+                "parking_score": parking,
+                "demand_proxy": demand,
+                "is_existing": False,
+            }
+        )
+    return candidates
 
 
 def generate_placeholder_data(config: Config) -> Tuple[List[Dict], List[Dict]]:
@@ -114,13 +189,11 @@ def load_data(data_dir: Path, config: Config) -> Tuple[List[Dict], List[Dict], s
     existing_path = data_dir / "existing_stations.csv"
     candidates_path = data_dir / "candidate_sites.csv"
 
-    if not existing_path.exists() or not candidates_path.exists():
+    if not existing_path.exists():
         existing, candidates = generate_placeholder_data(config)
         return existing, candidates, "placeholder"
 
     existing_rows = read_csv_rows(existing_path)
-    candidates_rows = read_csv_rows(candidates_path)
-
     existing: List[Dict] = []
     for row in existing_rows:
         existing.append(
@@ -135,6 +208,15 @@ def load_data(data_dir: Path, config: Config) -> Tuple[List[Dict], List[Dict], s
             }
         )
 
+    npa_candidates = load_npa_candidates(data_dir, config)
+    if npa_candidates:
+        return existing, npa_candidates, "npa_geojson"
+
+    if not candidates_path.exists():
+        existing, candidates = generate_placeholder_data(config)
+        return existing, candidates, "placeholder"
+
+    candidates_rows = read_csv_rows(candidates_path)
     candidates: List[Dict] = []
     for row in candidates_rows:
         rec = {
@@ -310,6 +392,29 @@ def build_candidate_graph(candidates: List[Dict], edge_radius_km: float) -> Dict
     return adjacency
 
 
+def candidate_distance_stats(existing: List[Dict], candidates: List[Dict]) -> List[float]:
+    nearest: List[float] = []
+    for c in candidates:
+        nearest.append(min(haversine_km(c["lat"], c["lon"], e["lat"], e["lon"]) for e in existing))
+    return nearest
+
+
+def compute_effective_service_radius(config: Config, nearest_distances: List[float]) -> Tuple[float, float, bool]:
+    if not nearest_distances:
+        return config.service_radius_km, 0.0, False
+
+    n = len(nearest_distances)
+    baseline_coverage = sum(1 for d in nearest_distances if d <= config.service_radius_km) / n
+    max_coverage = max(0.0, min(1.0, 1.0 - config.min_uncovered_ratio))
+    if baseline_coverage <= max_coverage:
+        return config.service_radius_km, baseline_coverage, False
+
+    sorted_d = sorted(nearest_distances)
+    idx = int((n - 1) * max_coverage)
+    tuned_radius = max(0.01, sorted_d[idx])
+    return tuned_radius, baseline_coverage, True
+
+
 def graph_smooth_scores(
     candidates: List[Dict],
     adjacency: Dict[str, List[Tuple[str, float]]],
@@ -445,6 +550,7 @@ def greedy_facility_expansion(
             "lat": candidates[idx]["lat"],
             "lon": candidates[idx]["lon"],
             "node_weight": candidates[idx]["learned_node_score"],
+            "population_score": candidates[idx].get("population_score", ""),
             "marginal_demand_gain": marginal,
             "cumulative_coverage": sum(1 for x in covered if x) / n,
         }
@@ -480,6 +586,7 @@ def community_metrics(
             "community_id": community_map.get(n["site_id"], -1),
             "distance_to_nearest_existing_km": d,
             "node_weight": n.get("learned_node_score", ""),
+            "population_score": n.get("population_score", ""),
         }
         node_rows.append(row)
 
@@ -551,6 +658,10 @@ def to_geojson(rows: List[Dict], prop_fields: List[str]) -> Dict:
 def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
     existing, candidates, data_mode = load_data(data_dir, config)
     engineer_features(existing, candidates, config)
+    nearest_distances = candidate_distance_stats(existing, candidates)
+    effective_service_radius_km, baseline_coverage, radius_tuned = compute_effective_service_radius(
+        config, nearest_distances
+    )
 
     x: List[List[float]] = []
     for c in candidates:
@@ -583,7 +694,7 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
     scenario_recs: Dict[int, List[Dict]] = {}
 
     for budget in scenarios:
-        recs = greedy_facility_expansion(existing, candidates, budget, config.service_radius_km)
+        recs = greedy_facility_expansion(existing, candidates, budget, effective_service_radius_km)
         scenario_recs[budget] = recs
         scenario_rows.append(
             {
@@ -591,6 +702,8 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
                 "selected_sites": len(recs),
                 "coverage_ratio": recs[-1]["cumulative_coverage"] if recs else 0.0,
                 "aggregate_marginal_demand_gain": sum(r["marginal_demand_gain"] for r in recs),
+                "baseline_coverage_ratio": baseline_coverage,
+                "effective_service_radius_km": effective_service_radius_km,
             }
         )
 
@@ -616,6 +729,9 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
         "smoothing_alpha": config.smoothing_alpha,
         "smoothing_iters": config.smoothing_iters,
         "ridge_lambda": config.ridge_lambda,
+        "baseline_coverage_ratio": baseline_coverage,
+        "effective_service_radius_km": effective_service_radius_km,
+        "service_radius_tuned": radius_tuned,
     }
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -623,12 +739,28 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
     write_csv(
         output_dir / "ranked_recommendations.csv",
         ranked_recs,
-        ["rank", "site_id", "lat", "lon", "node_weight", "marginal_demand_gain", "cumulative_coverage"],
+        [
+            "rank",
+            "site_id",
+            "lat",
+            "lon",
+            "node_weight",
+            "population_score",
+            "marginal_demand_gain",
+            "cumulative_coverage",
+        ],
     )
     write_csv(
         output_dir / "scenario_summary.csv",
         scenario_rows,
-        ["stations_added", "selected_sites", "coverage_ratio", "aggregate_marginal_demand_gain"],
+        [
+            "stations_added",
+            "selected_sites",
+            "coverage_ratio",
+            "aggregate_marginal_demand_gain",
+            "baseline_coverage_ratio",
+            "effective_service_radius_km",
+        ],
     )
     write_csv(
         output_dir / "node_clusters.csv",
@@ -641,6 +773,7 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
             "community_id",
             "distance_to_nearest_existing_km",
             "node_weight",
+            "population_score",
         ],
     )
     write_csv(
@@ -663,11 +796,11 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
 
     rec_geo = to_geojson(
         ranked_recs,
-        ["rank", "site_id", "node_weight", "marginal_demand_gain", "cumulative_coverage"],
+        ["rank", "site_id", "node_weight", "population_score", "marginal_demand_gain", "cumulative_coverage"],
     )
     clu_geo = to_geojson(
         node_clusters,
-        ["site_id", "community_id", "is_existing", "distance_to_nearest_existing_km", "node_weight"],
+        ["site_id", "community_id", "is_existing", "distance_to_nearest_existing_km", "node_weight", "population_score"],
     )
 
     with (output_dir / "recommendations.geojson").open("w", encoding="utf-8") as f:
@@ -681,6 +814,11 @@ def run_pipeline(data_dir: Path, output_dir: Path, config: Config) -> None:
     print(f"Nodes in graph: {len(existing) + len(candidates)}")
     print(f"Edges in graph: {edge_count}")
     print(f"Training target source: {target_source}")
+    if radius_tuned:
+        print(
+            "Service radius tuned for dense candidate overlap: "
+            f"{config.service_radius_km:.3f} -> {effective_service_radius_km:.3f} km"
+        )
 
     print("\nScenario summary:")
     for row in scenario_rows:
@@ -710,6 +848,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--service-radius-km", type=float, default=2.5)
     parser.add_argument("--density-radius-km", type=float, default=2.0)
     parser.add_argument("--underserved-distance-km", type=float, default=2.2)
+    parser.add_argument("--min-uncovered-ratio", type=float, default=0.15)
     parser.add_argument("--smoothing-alpha", type=float, default=0.70)
     parser.add_argument("--smoothing-iters", type=int, default=2)
     parser.add_argument("--ridge-lambda", type=float, default=0.05)
@@ -723,6 +862,7 @@ def main() -> None:
         service_radius_km=args.service_radius_km,
         density_radius_km=args.density_radius_km,
         underserved_distance_km=args.underserved_distance_km,
+        min_uncovered_ratio=args.min_uncovered_ratio,
         smoothing_alpha=args.smoothing_alpha,
         smoothing_iters=args.smoothing_iters,
         ridge_lambda=args.ridge_lambda,
