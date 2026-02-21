@@ -8,15 +8,23 @@ export function deriveChargerCount(station: OcmStation): number {
   return 1;
 }
 
-export function scoreStation(station: OcmStation, trafficScore: number): ScoredStation {
+export function scoreStation(
+  station: OcmStation,
+  trafficScore: number,
+  maxChargerCount: number
+): ScoredStation {
   const chargerCount = deriveChargerCount(station);
   const utilization = (trafficScore * 100) / chargerCount;
+
+  const normStations = maxChargerCount > 0 ? chargerCount / maxChargerCount : 0;
+  const balanceScore = 1 - Math.abs(trafficScore - normStations);
+
   const status =
-    utilization > 150 ? 'overloaded' :
-    utilization > 60  ? 'balanced' :
+    balanceScore < 0.33 ? 'overloaded' :
+    balanceScore < 0.66 ? 'balanced' :
     'underutilized';
 
-  return { ...station, chargerCount, trafficScore, utilization, status };
+  return { ...station, chargerCount, trafficScore, balanceScore, utilization, status };
 }
 
 const DEMAND_CENTERS: Array<[number, number, number]> = [
@@ -44,7 +52,16 @@ export function simulateTrafficScore(lat: number, lng: number): number {
   let score = 0;
   for (const [clat, clng, weight] of DEMAND_CENTERS) {
     const dist = haversineKm(lat, lng, clat, clng);
-    score += weight * Math.exp(-dist / 3);
+    score += weight * Math.exp(-dist / 2.6);
   }
-  return Math.min(score, 1.0);
+
+  // Deterministic noise based on lat/lng so values vary but are stable.
+  const seed = Math.sin(lat * 12.9898 + lng * 78.233) * 43758.5453;
+  const noise = seed - Math.floor(seed); // 0..1
+  const jitter = (noise - 0.5) * 0.25; // -0.125..0.125
+
+  // Compress into a 0.15..0.95 band so it doesn't look maxed out.
+  const normalized = 1 / (1 + Math.exp(-2.2 * (score - 0.7)));
+  const withJitter = Math.max(0, Math.min(1, normalized + jitter));
+  return 0.15 + withJitter * 0.8;
 }

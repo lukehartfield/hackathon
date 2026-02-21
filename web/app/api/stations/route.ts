@@ -9,12 +9,17 @@ export async function GET() {
   const raw = JSON.parse(readFileSync(filePath, 'utf-8'));
   const stations = parseOcmFeatures(raw);
 
+  const maxChargerCount = stations.reduce((max, s) => {
+    const count = s.NumberOfPoints ?? (s.Connections?.reduce((sum, c) => sum + (c.Quantity ?? 1), 0) ?? 1);
+    return Math.max(max, count);
+  }, 1);
+
   const scored = stations.map(s => {
     const trafficScore = simulateTrafficScore(
       s.AddressInfo.Latitude,
       s.AddressInfo.Longitude
     );
-    return scoreStation(s, trafficScore);
+    return scoreStation(s, trafficScore, maxChargerCount);
   });
 
   return NextResponse.json(scored);

@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import type { ScoredStation } from '@/lib/types';
+import type { ScoredStation, Recommendation } from '@/lib/types';
+import { parseRecommendations } from '@/lib/geojson';
+import NodesTab from '@/components/tabs/NodesTab';
 
 const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
 export default function Home() {
   const [stations, setStations] = useState<ScoredStation[]>([]);
+  const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,9 +23,29 @@ export default function Home() {
       .catch(() => setIsLoading(false));
   }, []);
 
-  const overloaded = stations.filter(s => s.status === 'overloaded').length;
-  const balanced = stations.filter(s => s.status === 'balanced').length;
-  const underutilized = stations.filter(s => s.status === 'underutilized').length;
+  useEffect(() => {
+    fetch('/data/recommendations.geojson')
+      .then(r => r.json())
+      .then((fc) => setRecommendations(parseRecommendations(fc)))
+      .catch(() => setRecommendations([]));
+  }, []);
+
+  const balances = stations.map(s => s.balanceScore).sort((a, b) => a - b);
+  const percentile = (p: number) => {
+    if (!balances.length) return 0;
+    const idx = (balances.length - 1) * p;
+    const lo = Math.floor(idx);
+    const hi = Math.ceil(idx);
+    if (lo === hi) return balances[lo];
+    const t = idx - lo;
+    return balances[lo] + (balances[hi] - balances[lo]) * t;
+  };
+  const p20 = percentile(0.2);
+  const p80 = percentile(0.8);
+  const redCount = stations.filter(s => s.utilization <= p20).length;
+  const greenCount = stations.filter(s => s.utilization >= p80).length;
+  const yellowCount = Math.max(0, stations.length - redCount - greenCount);
+  const totalPoints = stations.reduce((sum, s) => sum + s.chargerCount, 0);
 
   return (
     <div className="h-screen w-screen relative overflow-hidden">
@@ -70,16 +93,21 @@ export default function Home() {
               </div>
               <div className="w-px h-4 bg-border" />
               <div className="flex items-center gap-1.5">
+                <span className="text-[var(--text-secondary)]">Points</span>
+                <span className="text-[var(--text-primary)] font-semibold">{totalPoints}</span>
+              </div>
+              <div className="w-px h-4 bg-border" />
+              <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-overloaded" />
-                <span className="text-overloaded font-semibold">{overloaded}</span>
+                <span className="text-overloaded font-semibold">{redCount}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-balanced" />
-                <span className="text-balanced font-semibold">{balanced}</span>
+                <span className="text-balanced font-semibold">{yellowCount}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-underutilized" />
-                <span className="text-underutilized font-semibold">{underutilized}</span>
+                <span className="text-underutilized font-semibold">{greenCount}</span>
               </div>
             </div>
           </div>
@@ -93,22 +121,29 @@ export default function Home() {
           style={{ animationDelay: '0.3s' }}
         >
           <div className="text-[10px] uppercase tracking-widest text-[var(--text-muted)] mb-2 font-body font-medium">
-            Utilization
+            Balance
           </div>
           <div className="flex items-center gap-4 text-xs font-body">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-overloaded shadow-[0_0_6px_var(--overloaded)]" />
-              <span className="text-[var(--text-secondary)]">&gt;150% Overloaded</span>
+              <span className="text-[var(--text-secondary)]">Bottom 20% (low match)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-balanced shadow-[0_0_6px_var(--balanced)]" />
-              <span className="text-[var(--text-secondary)]">60–150% Balanced</span>
+              <span className="text-[var(--text-secondary)]">Middle 60% (mid match)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-underutilized shadow-[0_0_6px_var(--underutilized)]" />
-              <span className="text-[var(--text-secondary)]">&lt;60% Underutilized</span>
+              <span className="text-[var(--text-secondary)]">Top 20% (high match)</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* ── Top 10 Recommendations ───────────────────── */}
+      <div className="absolute top-20 right-5 z-[1000] w-[320px] pointer-events-none">
+        <div className="glass-strong rounded-xl glow-border pointer-events-auto animate-slide-up">
+          <NodesTab recommendations={recommendations} />
         </div>
       </div>
     </div>
