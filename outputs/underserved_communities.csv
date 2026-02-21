@@ -1,5 +1,5 @@
 community_id,node_count,existing_count,avg_dist_to_existing_km,avg_node_weight,underserved
-0,803,630,0.02456873120565301,0.5190709313885692,False
+0,803,630,0.02456873120565301,0.4134479412494525,False
 1,8,8,0.0,0.0,False
 2,13,13,0.0,0.0,False
 3,2,2,0.0,0.0,False

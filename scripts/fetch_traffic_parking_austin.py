@@ -85,8 +85,16 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 2 * r * math.asin(math.sqrt(a))
 
 
-def fetch_socrata(dataset_id: str, limit: int = 50000, offset: int = 0) -> list[dict]:
-    url = f"{BASE_URL}/{dataset_id}.json?$limit={limit}&$offset={offset}"
+def fetch_socrata(
+    dataset_id: str,
+    limit: int = 50000,
+    offset: int = 0,
+    where: str | None = None,
+) -> list[dict]:
+    params = f"$limit={limit}&$offset={offset}"
+    if where:
+        params += f"&$where={urllib.parse.quote(where)}"
+    url = f"{BASE_URL}/{dataset_id}.json?{params}"
     req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": "ev-austin-etl/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=60, context=_SSL_CTX) as resp:
@@ -306,15 +314,17 @@ def fetch_radar_sensors() -> dict[str, dict]:
 
 def fetch_radar_volumes(sensors: dict[str, dict]) -> list[dict]:
     """Fetch radar traffic counts and aggregate average volume per sensor location.
-    Joins with sensor locations via int_id -> kits_id."""
-    print("Fetching radar traffic volumes (Austin Open Data)...")
+    Joins with sensor locations via int_id -> kits_id.
+    Limited to a 2-week window to keep runtime short."""
+    print("Fetching radar traffic volumes (Austin Open Data, 2-week sample)...")
+    date_filter = "curdatetime >= '2021-08-26T00:00:00' AND curdatetime < '2021-09-10T00:00:00'"
     volume_sums: dict[str, list[float]] = {}
     offset = 0
     batch_size = 50000
     total_rows = 0
 
     while True:
-        rows = fetch_socrata(RADAR_COUNTS_ID, limit=batch_size, offset=offset)
+        rows = fetch_socrata(RADAR_COUNTS_ID, limit=batch_size, offset=offset, where=date_filter)
         if not rows:
             break
         total_rows += len(rows)

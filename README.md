@@ -6,6 +6,18 @@ Built for the TVG x c0mpiled Hackathon at UT Austin.
 
 ---
 
+## Quick Start
+
+```bash
+git clone https://github.com/lukehartfield/hackathon.git
+cd hackathon
+cd web && npm install && npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). The app uses pre-built data in `web/public/data/`. For a full run (fetch fresh data, run optimization, regenerate outputs), see [How to Run](#how-to-run) below.
+
+---
+
 ## The Problem
 
 Austin is one of the fastest-growing cities in the U.S. EV adoption is accelerating, but charging infrastructure placement still relies on incomplete data -- operators lack visibility into traffic flow, parking feasibility, and neighborhood-level coverage gaps. The result: overloaded stations in some corridors, dead zones in others, and no systematic way to decide where the next charger should go.

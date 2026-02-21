@@ -24,6 +24,7 @@ export function parseRecommendations(fc: any): Recommendation[] {
       site_id: f.properties.site_id ?? '',
       node_weight: Number(f.properties.node_weight ?? 0),
       marginal_gain: Number(f.properties.marginal_demand_gain ?? f.properties.marginal_gain ?? 0),
+      rank: f.properties.rank != null ? Number(f.properties.rank) : undefined,
       reasoning: f.properties.reasoning,
     }));
 }
