@@ -35,6 +35,20 @@ OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
 OCM_PATH = OUTPUT_DIR / "ocm_austin.json"
 EXISTING_CSV = OUTPUT_DIR / "existing_stations.csv"
 CANDIDATES_CSV = OUTPUT_DIR / "candidate_sites.csv"
+TRAFFIC_CSV = OUTPUT_DIR / "traffic_incidents_austin.csv"
+TRAFFIC_JSON = OUTPUT_DIR / "traffic_incidents_austin.json"
+
+# Traffic CSV columns (excludes Socrata internal fields)
+TRAFFIC_CSV_FIELDS = [
+    "traffic_report_id",
+    "published_date",
+    "issue_reported",
+    "latitude",
+    "longitude",
+    "address",
+    "traffic_report_status",
+    "agency",
+]
 
 # Radius in km for counting nearby traffic incidents
 TRAFFIC_RADIUS_KM = 2.0
@@ -105,10 +119,14 @@ def ocm_to_existing(ocm_records: list[dict]) -> list[dict]:
     return rows
 
 
+def _is_socrata_internal_key(key: str) -> bool:
+    return key.startswith(":@computed_region") or key == "location"
+
+
 def load_traffic_incidents() -> list[dict]:
     print("Fetching traffic incidents (Austin Open Data)...")
     rows = fetch_socrata(TRAFFIC_INCIDENTS_ID, limit=10000)
-    points = []
+    records = []
     for r in rows:
         lat = r.get("latitude")
         lon = r.get("longitude")
@@ -126,10 +144,17 @@ def load_traffic_incidents() -> list[dict]:
             lat, lon = float(lat), float(lon)
         except (TypeError, ValueError):
             continue
-        if AUSTIN_BBOX["min_lat"] <= lat <= AUSTIN_BBOX["max_lat"] and AUSTIN_BBOX["min_lon"] <= lon <= AUSTIN_BBOX["max_lon"]:
-            points.append({"lat": lat, "lon": lon})
-    print(f"  -> {len(points)} incidents in Austin bbox")
-    return points
+        if not (AUSTIN_BBOX["min_lat"] <= lat <= AUSTIN_BBOX["max_lat"] and
+                AUSTIN_BBOX["min_lon"] <= lon <= AUSTIN_BBOX["max_lon"]):
+            continue
+        cleaned = {k: v for k, v in r.items() if not _is_socrata_internal_key(k)}
+        cleaned["latitude"] = lat
+        cleaned["longitude"] = lon
+        cleaned["lat"] = lat
+        cleaned["lon"] = lon
+        records.append(cleaned)
+    print(f"  -> {len(records)} incidents in Austin bbox")
+    return records
 
 
 def load_parking_lots() -> list[dict]:
@@ -219,6 +244,17 @@ def main() -> None:
     existing = ocm_to_existing(ocm)
     incidents = load_traffic_incidents()
     parking = load_parking_lots()
+
+    # Export traffic incidents for push/sharing
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    traffic_for_csv = [
+        {k: str(rec.get(k, "")) for k in TRAFFIC_CSV_FIELDS}
+        for rec in incidents
+    ]
+    write_csv(TRAFFIC_CSV, traffic_for_csv, TRAFFIC_CSV_FIELDS)
+    with TRAFFIC_JSON.open("w", encoding="utf-8") as f:
+        json.dump(incidents, f, ensure_ascii=False, indent=2)
+    print(f"Wrote {len(incidents)} records to {TRAFFIC_JSON}")
 
     if not parking:
         raise SystemExit("No parking locations fetched. Check API availability.")
