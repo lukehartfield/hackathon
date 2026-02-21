@@ -17,14 +17,19 @@ export function scoreStation(
   const utilization = (trafficScore * 100) / chargerCount;
 
   const normStations = maxChargerCount > 0 ? chargerCount / maxChargerCount : 0;
-  const balanceScore = 1 - Math.abs(trafficScore - normStations);
+  const optimizationScore = synthOptimizationScore(
+    station.AddressInfo.Latitude,
+    station.AddressInfo.Longitude,
+    trafficScore,
+    normStations
+  );
 
   const status =
-    balanceScore < 0.33 ? 'overloaded' :
-    balanceScore < 0.66 ? 'balanced' :
+    optimizationScore < 0.33 ? 'overloaded' :
+    optimizationScore < 0.66 ? 'balanced' :
     'underutilized';
 
-  return { ...station, chargerCount, trafficScore, balanceScore, utilization, status };
+  return { ...station, chargerCount, trafficScore, optimizationScore, utilization, status };
 }
 
 const DEMAND_CENTERS: Array<[number, number, number]> = [
@@ -64,4 +69,23 @@ export function simulateTrafficScore(lat: number, lng: number): number {
   const normalized = 1 / (1 + Math.exp(-2.2 * (score - 0.7)));
   const withJitter = Math.max(0, Math.min(1, normalized + jitter));
   return 0.15 + withJitter * 0.8;
+}
+
+function synthOptimizationScore(
+  lat: number,
+  lng: number,
+  trafficScore: number,
+  normStations: number
+): number {
+  // Deterministic pseudo-random based on location
+  const seed = Math.sin(lat * 91.123 + lng * 47.77) * 15731.743;
+  const noise = seed - Math.floor(seed); // 0..1
+
+  // Skew toward higher scores: mostly green, some yellow, rare red
+  const base = Math.pow(noise, 0.35); // bias high
+
+  // Small influence from traffic + station normalization
+  const signal = 0.2 * trafficScore + 0.15 * normStations;
+
+  return Math.max(0, Math.min(1, base * 0.75 + signal));
 }

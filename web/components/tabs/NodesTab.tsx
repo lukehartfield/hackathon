@@ -1,6 +1,12 @@
 import type { Recommendation } from '@/lib/types';
 
-export default function NodesTab({ recommendations }: { recommendations: Recommendation[] }) {
+export default function NodesTab({
+  recommendations,
+  onSelect,
+}: {
+  recommendations: Recommendation[];
+  onSelect?: (rec: Recommendation) => void;
+}) {
   const sorted = [...recommendations].sort((a, b) => b.node_weight - a.node_weight).slice(0, 10);
 
   return (
@@ -9,7 +15,11 @@ export default function NodesTab({ recommendations }: { recommendations: Recomme
       <p className="text-xs text-gray-400">Ranked by expected network impact</p>
       <div className="space-y-2 overflow-y-auto max-h-96">
         {sorted.map((r, i) => (
-          <div key={r.site_id} className="bg-gray-800 rounded p-2">
+          <button
+            key={r.site_id}
+            onClick={() => onSelect?.(r)}
+            className="bg-gray-800 rounded p-2 text-left w-full hover:bg-gray-700 transition-colors"
+          >
             <div className="flex justify-between items-start">
               <span className="text-xs text-blue-400 font-bold">#{i + 1}</span>
               <span className="text-xs text-green-400">+{r.marginal_gain.toFixed(1)} pts</span>
@@ -20,7 +30,7 @@ export default function NodesTab({ recommendations }: { recommendations: Recomme
             <div className="mt-1 h-1.5 bg-gray-700 rounded">
               <div className="h-1.5 bg-blue-500 rounded" style={{ width: `${r.node_weight * 100}%` }} />
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </div>

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import type { ScoredStation } from '@/lib/types';
+import type { ScoredStation, Recommendation } from '@/lib/types';
 
 const STATUS_COLORS: Record<string, string> = {
   overloaded: '#ff3860',
@@ -81,7 +81,13 @@ function utilizationBand(utilization: number, p20: number, p80: number) {
   return 'mid';
 }
 
-export default function MapView({ stations }: { stations: ScoredStation[] }) {
+export default function MapView({
+  stations,
+  recommendations = [],
+}: {
+  stations: ScoredStation[];
+  recommendations?: Recommendation[];
+}) {
   const mapRef = useRef<L.Map | null>(null);
   const layersRef = useRef<L.Layer[]>([]);
 
@@ -104,6 +110,12 @@ export default function MapView({ stations }: { stations: ScoredStation[] }) {
         maxZoom: 19,
       }
     ).addTo(mapRef.current);
+
+    // Expose a simple global hook so other UI elements can pan/zoom the map.
+    (window as any).__flyToStation = (lat: number, lng: number) => {
+      if (!mapRef.current) return;
+      mapRef.current.flyTo([lat, lng], 15, { duration: 0.9 });
+    };
   }, []);
 
   /* ── Render station markers ────────────────────── */
@@ -115,18 +127,18 @@ export default function MapView({ stations }: { stations: ScoredStation[] }) {
     layersRef.current.forEach(l => map.removeLayer(l));
     layersRef.current = [];
 
-    const balances = stations.map(s => s.balanceScore).sort((a, b) => a - b);
-    const p20 = percentile(balances, 0.2);
-    const p50 = percentile(balances, 0.5);
-    const p80 = percentile(balances, 0.8);
+    const scores = stations.map(s => s.optimizationScore).sort((a, b) => a - b);
+    const p10 = percentile(scores, 0.1);
+    const p50 = percentile(scores, 0.5);
+    const p90 = percentile(scores, 0.9);
 
     stations.forEach(s => {
-      const color = utilizationToColor(s.balanceScore, p20, p50, p80);
+      const color = utilizationToColor(s.optimizationScore, p10, p50, p90);
       const radius = Math.max(3, Math.min(9, 2 + s.chargerCount * 1.2));
       const statusColor = STATUS_COLORS[s.status] ?? '#00e68a';
-      const optScore = utilizationToScore(s.balanceScore, p20, p50, p80);
-      const band = utilizationBand(s.balanceScore, p20, p80);
-      const bandLabel = band === 'low' ? 'Low balance' : band === 'high' ? 'High balance' : 'Mid balance';
+      const optScore = utilizationToScore(s.optimizationScore, p10, p50, p90);
+      const band = utilizationBand(s.optimizationScore, p10, p90);
+      const bandLabel = band === 'low' ? 'Low optimization' : band === 'high' ? 'High optimization' : 'Mid optimization';
 
       const circle = L.circleMarker(
         [s.AddressInfo.Latitude, s.AddressInfo.Longitude],
@@ -144,7 +156,7 @@ export default function MapView({ stations }: { stations: ScoredStation[] }) {
           `<div style="font-weight:600;margin-bottom:4px">${s.AddressInfo.Title}</div>` +
           `<div style="display:flex;justify-content:space-between;gap:12px">` +
             `<span style="color:#7b8ea8">${s.chargerCount} station${s.chargerCount !== 1 ? 's' : ''}</span>` +
-            `<span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(s.balanceScore * 100).toFixed(0)}%</span>` +
+            `<span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(s.optimizationScore * 100).toFixed(0)}%</span>` +
           `</div>` +
         `</div>`,
         { direction: 'top', offset: [0, -6] }
@@ -157,11 +169,8 @@ export default function MapView({ stations }: { stations: ScoredStation[] }) {
             `<div style="color:#7b8ea8">Usage</div><div>${s.UsageType?.Title ?? 'Unknown'}</div>` +
             `<div style="color:#7b8ea8">Stations</div><div>${s.chargerCount}</div>` +
             `<div style="color:#7b8ea8">Traffic score</div><div>${(s.trafficScore * 100).toFixed(0)}%</div>` +
-            `<div style="color:#7b8ea8">Balance score</div><div>${(s.balanceScore * 100).toFixed(0)}%</div>` +
+            `<div style="color:#7b8ea8">Optimization score</div><div>${(s.optimizationScore * 100).toFixed(0)}%</div>` +
             `<div style="color:#7b8ea8">Band</div><div style="color:${color};font-weight:600">${bandLabel}</div>` +
-          `</div>` +
-          `<div style="margin-top:8px;color:#7b8ea8;font-size:11px">` +
-            `Balance = 1 - |traffic - stations (normalized)|` +
           `</div>` +
         `</div>`,
         { offset: [0, -4] }
@@ -170,7 +179,43 @@ export default function MapView({ stations }: { stations: ScoredStation[] }) {
       circle.addTo(map);
       layersRef.current.push(circle);
     });
-  }, [stations]);
+  }, [stations, recommendations]);
+
+  /* ── Render recommendation markers ─────────────── */
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const recLayers: L.Layer[] = [];
+    const color = '#3b82f6';
+
+    recommendations.forEach(r => {
+      const circle = L.circleMarker([r.lat, r.lng], {
+        radius: 6,
+        color,
+        fillColor: color,
+        fillOpacity: 0.85,
+        weight: 1.5,
+        className: 'marker-recommendation',
+      }).bindTooltip(
+        `<div style="min-width:140px">` +
+          `<div style="font-weight:600;margin-bottom:4px">Recommended Site</div>` +
+          `<div style="display:flex;justify-content:space-between;gap:12px">` +
+            `<span style="color:#7b8ea8">Node weight</span>` +
+            `<span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(r.node_weight * 100).toFixed(0)}%</span>` +
+          `</div>` +
+        `</div>`,
+        { direction: 'top', offset: [0, -6] }
+      );
+
+      circle.addTo(map);
+      recLayers.push(circle);
+    });
+
+    return () => {
+      recLayers.forEach(l => map.removeLayer(l));
+    };
+  }, [recommendations]);
 
   return <div id="map" className="w-full h-full" />;
 }

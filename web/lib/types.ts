@@ -25,7 +25,7 @@ export interface OcmStation {
 export interface ScoredStation extends OcmStation {
   chargerCount: number;
   trafficScore: number;
-  balanceScore: number;
+  optimizationScore: number;
   utilization: number;
   status: UtilizationStatus;
 }
