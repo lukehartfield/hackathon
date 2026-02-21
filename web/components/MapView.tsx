@@ -138,7 +138,7 @@ export default function MapView({
       const statusColor = STATUS_COLORS[s.status] ?? '#00e68a';
       const optScore = utilizationToScore(s.optimizationScore, p10, p50, p90);
       const band = utilizationBand(s.optimizationScore, p10, p90);
-      const bandLabel = band === 'low' ? 'Low optimization' : band === 'high' ? 'High optimization' : 'Mid optimization';
+      const bandLabel = band === 'low' ? 'Overloaded' : band === 'high' ? 'Underutilized' : 'Balanced';
 
       const circle = L.circleMarker(
         [s.AddressInfo.Latitude, s.AddressInfo.Longitude],
@@ -155,7 +155,7 @@ export default function MapView({
         `<div style="min-width:140px">` +
           `<div style="font-weight:600;margin-bottom:4px">${s.AddressInfo.Title}</div>` +
           `<div style="display:flex;justify-content:space-between;gap:12px">` +
-            `<span style="color:#7b8ea8">${s.chargerCount} station${s.chargerCount !== 1 ? 's' : ''}</span>` +
+            `<span style="color:#7b8ea8">${s.chargerCount} charger${s.chargerCount !== 1 ? 's' : ''}</span>` +
             `<span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(s.optimizationScore * 100).toFixed(0)}%</span>` +
           `</div>` +
         `</div>`,
@@ -167,10 +167,10 @@ export default function MapView({
           `<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;font-size:12px">` +
             `<div style="color:#7b8ea8">Operator</div><div>${s.OperatorInfo?.Title ?? 'Unknown'}</div>` +
             `<div style="color:#7b8ea8">Usage</div><div>${s.UsageType?.Title ?? 'Unknown'}</div>` +
-            `<div style="color:#7b8ea8">Stations</div><div>${s.chargerCount}</div>` +
+            `<div style="color:#7b8ea8">Chargers</div><div>${s.chargerCount}</div>` +
             `<div style="color:#7b8ea8">Traffic score</div><div>${(s.trafficScore * 100).toFixed(0)}%</div>` +
             `<div style="color:#7b8ea8">Optimization score</div><div>${(s.optimizationScore * 100).toFixed(0)}%</div>` +
-            `<div style="color:#7b8ea8">Band</div><div style="color:${color};font-weight:600">${bandLabel}</div>` +
+            `<div style="color:#7b8ea8">Status</div><div style="color:${color};font-weight:600">${bandLabel}</div>` +
           `</div>` +
         `</div>`,
         { offset: [0, -4] }
@@ -200,9 +200,9 @@ export default function MapView({
       }).bindTooltip(
         `<div style="min-width:140px">` +
           `<div style="font-weight:600;margin-bottom:4px">Recommended Site</div>` +
-          `<div style="display:flex;justify-content:space-between;gap:12px">` +
-            `<span style="color:#7b8ea8">Node weight</span>` +
-            `<span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(r.node_weight * 100).toFixed(0)}%</span>` +
+          `<div style="display:flex;flex-direction:column;gap:2px;font-size:11px">` +
+            `<div style="display:flex;justify-content:space-between"><span style="color:#7b8ea8">Node weight</span><span style="color:${color};font-family:'Azeret Mono',monospace;font-weight:500">${(r.node_weight * 100).toFixed(0)}%</span></div>` +
+            `<div style="display:flex;justify-content:space-between"><span style="color:#7b8ea8">Marginal gain</span><span>${r.marginal_gain.toFixed(1)}</span></div>` +
           `</div>` +
         `</div>`,
         { direction: 'top', offset: [0, -6] }
