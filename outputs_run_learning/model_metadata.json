@@ -1,0 +1,26 @@
+{
+  "model_type": "ridge_regression_plus_graph_smoothing",
+  "target_source": "proxy_target",
+  "data_mode": "npa_geojson",
+  "feature_names": [
+    "traffic_score",
+    "parking_score",
+    "charger_gap_score",
+    "distance_to_nearest_existing",
+    "demand_proxy"
+  ],
+  "weights": {
+    "intercept": -0.1609300890761559,
+    "traffic_score": 0.5397208720431634,
+    "parking_score": 0.19299810435517156,
+    "charger_gap_score": 0.00021123598821286282,
+    "distance_to_nearest_existing": 0.13478210167930157,
+    "demand_proxy": 0.4732740069468245
+  },
+  "smoothing_alpha": 0.7,
+  "smoothing_iters": 2,
+  "ridge_lambda": 0.05,
+  "baseline_coverage_ratio": 1.0,
+  "effective_service_radius_km": 0.9900441608055851,
+  "service_radius_tuned": true
+}

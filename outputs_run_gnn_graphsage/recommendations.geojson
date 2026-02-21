@@ -1,0 +1,905 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7217847705786,
+          30.366722253064758
+        ]
+      },
+      "properties": {
+        "rank": 1,
+        "site_id": "NPA_44",
+        "node_weight": 0.3588538160587408,
+        "population_score": 0.19743620948440224,
+        "marginal_demand_gain": 0.5642809950499402,
+        "cumulative_coverage": 0.8690476190476191
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81288179308406,
+          30.21387710930234
+        ]
+      },
+      "properties": {
+        "rank": 2,
+        "site_id": "NPA_84",
+        "node_weight": 0.5055551833164968,
+        "population_score": 0.4854975457385096,
+        "marginal_demand_gain": 0.4639159222460242,
+        "cumulative_coverage": 0.8809523809523809
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68875365409174,
+          30.369894016884288
+        ]
+      },
+      "properties": {
+        "rank": 3,
+        "site_id": "NPA_39",
+        "node_weight": 0.3967079553604028,
+        "population_score": 0.25544602653036386,
+        "marginal_demand_gain": 0.3906747230894826,
+        "cumulative_coverage": 0.8928571428571429
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.66975031262233,
+          30.3104171429477
+        ]
+      },
+      "properties": {
+        "rank": 4,
+        "site_id": "NPA_67",
+        "node_weight": 0.3817050725539354,
+        "population_score": 0.15451705813151595,
+        "marginal_demand_gain": 0.33056910523699345,
+        "cumulative_coverage": 0.9047619047619048
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.66836992303676,
+          30.294247693933322
+        ]
+      },
+      "properties": {
+        "rank": 5,
+        "site_id": "NPA_25",
+        "node_weight": 0.36895813467447797,
+        "population_score": 0.22631941909050343,
+        "marginal_demand_gain": 0.26485843847062807,
+        "cumulative_coverage": 0.9166666666666666
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67810294726884,
+          30.302704340216536
+        ]
+      },
+      "properties": {
+        "rank": 6,
+        "site_id": "NPA_17",
+        "node_weight": 0.3020099315260671,
+        "population_score": 0.22631941909050343,
+        "marginal_demand_gain": 0.23869346069088382,
+        "cumulative_coverage": 0.9285714285714286
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72523293270707,
+          30.34629029973379
+        ]
+      },
+      "properties": {
+        "rank": 7,
+        "site_id": "NPA_87",
+        "node_weight": 0.2607355007531154,
+        "population_score": 0.20270982921585332,
+        "marginal_demand_gain": 0.22627632780688098,
+        "cumulative_coverage": 0.9404761904761905
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68514536144328,
+          30.346328881081373
+        ]
+      },
+      "properties": {
+        "rank": 8,
+        "site_id": "NPA_60",
+        "node_weight": 0.18828058760698332,
+        "population_score": 0.2001947182670074,
+        "marginal_demand_gain": 0.22276718182774508,
+        "cumulative_coverage": 0.9523809523809523
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73170630295266,
+          30.19945325709755
+        ]
+      },
+      "properties": {
+        "rank": 9,
+        "site_id": "NPA_58",
+        "node_weight": 0.21559843083750707,
+        "population_score": 0.06985517828891323,
+        "marginal_demand_gain": 0.20032810103795107,
+        "cumulative_coverage": 0.9642857142857143
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68526959482833,
+          30.326598384523408
+        ]
+      },
+      "properties": {
+        "rank": 10,
+        "site_id": "NPA_70",
+        "node_weight": 0.11610518467758765,
+        "population_score": 0.06940894892702122,
+        "marginal_demand_gain": 0.1437028054350642,
+        "cumulative_coverage": 0.9761904761904762
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74394746491627,
+          30.300048092806097
+        ]
+      },
+      "properties": {
+        "rank": 11,
+        "site_id": "NPA_78",
+        "node_weight": 0.573865581691437,
+        "population_score": 0.5704433897204981,
+        "marginal_demand_gain": 0.11342720015038651,
+        "cumulative_coverage": 0.9880952380952381
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69482954122803,
+          30.287346138063565
+        ]
+      },
+      "properties": {
+        "rank": 12,
+        "site_id": "NPA_47",
+        "node_weight": 0.18109141189115774,
+        "population_score": 0.06884102064824957,
+        "marginal_demand_gain": 0.1045134745681147,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72463914313346,
+          30.295809387693826
+        ]
+      },
+      "properties": {
+        "rank": 13,
+        "site_id": "NPA_28",
+        "node_weight": 0.1379268291111653,
+        "population_score": 0.18072289156626506,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7709739224879,
+          30.218206234137256
+        ]
+      },
+      "properties": {
+        "rank": 14,
+        "site_id": "NPA_29",
+        "node_weight": 0.05772082179465681,
+        "population_score": 0.04863900044622936,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71132716405458,
+          30.34106391249477
+        ]
+      },
+      "properties": {
+        "rank": 15,
+        "site_id": "NPA_30",
+        "node_weight": 0.17827953253149867,
+        "population_score": 0.1577623625816397,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72074018437765,
+          30.28187375034491
+        ]
+      },
+      "properties": {
+        "rank": 16,
+        "site_id": "NPA_34",
+        "node_weight": 0.10056478945354048,
+        "population_score": 0.18838992332968238,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7358633377846,
+          30.29594412743836
+        ]
+      },
+      "properties": {
+        "rank": 17,
+        "site_id": "NPA_36",
+        "node_weight": 0.1085215334656092,
+        "population_score": 0.12770273011236866,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7142231301706,
+          30.297738930562744
+        ]
+      },
+      "properties": {
+        "rank": 18,
+        "site_id": "NPA_37",
+        "node_weight": 0.1853011712990535,
+        "population_score": 0.18838992332968238,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79163319875443,
+          30.204337628979918
+        ]
+      },
+      "properties": {
+        "rank": 19,
+        "site_id": "NPA_40",
+        "node_weight": 0.5054197752397458,
+        "population_score": 0.4854975457385096,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70197297379694,
+          30.35154515115912
+        ]
+      },
+      "properties": {
+        "rank": 20,
+        "site_id": "NPA_41",
+        "node_weight": 0.3097703620238086,
+        "population_score": 0.26428948115695106,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77605793665121,
+          30.208836195366192
+        ]
+      },
+      "properties": {
+        "rank": 21,
+        "site_id": "NPA_42",
+        "node_weight": 0.06509031708145435,
+        "population_score": 0.04863900044622936,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7628875874089,
+          30.20854827377785
+        ]
+      },
+      "properties": {
+        "rank": 22,
+        "site_id": "NPA_43",
+        "node_weight": 0.18941598527043974,
+        "population_score": 0.09792706178248346,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77628385665047,
+          30.19791903828313
+        ]
+      },
+      "properties": {
+        "rank": 23,
+        "site_id": "NPA_45",
+        "node_weight": 0.2759095077879989,
+        "population_score": 0.1831974362094844,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67750008251394,
+          30.358847141834186
+        ]
+      },
+      "properties": {
+        "rank": 24,
+        "site_id": "NPA_48",
+        "node_weight": 0.16740277381111143,
+        "population_score": 0.26376211918380593,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.78877643464152,
+          30.2180424570865
+        ]
+      },
+      "properties": {
+        "rank": 25,
+        "site_id": "NPA_49",
+        "node_weight": 0.09779326307927139,
+        "population_score": 0.16912092815707275,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73504634942793,
+          30.366752696281342
+        ]
+      },
+      "properties": {
+        "rank": 26,
+        "site_id": "NPA_50",
+        "node_weight": 0.13709522238158597,
+        "population_score": 0.08790718429272647,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69821334832527,
+          30.228665372459407
+        ]
+      },
+      "properties": {
+        "rank": 27,
+        "site_id": "NPA_51",
+        "node_weight": 0.3963894863413897,
+        "population_score": 0.40282341487160767,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71671361986785,
+          30.291482284373018
+        ]
+      },
+      "properties": {
+        "rank": 28,
+        "site_id": "NPA_52",
+        "node_weight": 0.21753199050080385,
+        "population_score": 0.18838992332968238,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71992129583616,
+          30.25196257506583
+        ]
+      },
+      "properties": {
+        "rank": 29,
+        "site_id": "NPA_53",
+        "node_weight": 0.07519745539337563,
+        "population_score": 0.055170175652103366,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75972424111498,
+          30.275499317052176
+        ]
+      },
+      "properties": {
+        "rank": 30,
+        "site_id": "NPA_54",
+        "node_weight": 0.2189976999072465,
+        "population_score": 0.11107054480548456,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71229656071246,
+          30.336827989488214
+        ]
+      },
+      "properties": {
+        "rank": 31,
+        "site_id": "NPA_55",
+        "node_weight": 0.28513003962977246,
+        "population_score": 0.1577623625816397,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68678899668758,
+          30.255471089250793
+        ]
+      },
+      "properties": {
+        "rank": 32,
+        "site_id": "NPA_56",
+        "node_weight": 0.0,
+        "population_score": 0.04417670682730924,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68730577956916,
+          30.325648577072727
+        ]
+      },
+      "properties": {
+        "rank": 33,
+        "site_id": "NPA_57",
+        "node_weight": 0.11338508642872042,
+        "population_score": 0.06940894892702122,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67005703725431,
+          30.288706692410727
+        ]
+      },
+      "properties": {
+        "rank": 34,
+        "site_id": "NPA_59",
+        "node_weight": 0.36072180212077887,
+        "population_score": 0.22631941909050343,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73045759097391,
+          30.329559032938793
+        ]
+      },
+      "properties": {
+        "rank": 35,
+        "site_id": "NPA_61",
+        "node_weight": 0.4501078943037982,
+        "population_score": 0.4099225183562533,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74385368728791,
+          30.249903760942296
+        ]
+      },
+      "properties": {
+        "rank": 36,
+        "site_id": "NPA_63",
+        "node_weight": 0.2202672524491499,
+        "population_score": 0.1996673562938623,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7119794303195,
+          30.3384408307679
+        ]
+      },
+      "properties": {
+        "rank": 37,
+        "site_id": "NPA_64",
+        "node_weight": 0.11776495184141023,
+        "population_score": 0.1577623625816397,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77343300308661,
+          30.217486607166887
+        ]
+      },
+      "properties": {
+        "rank": 38,
+        "site_id": "NPA_65",
+        "node_weight": 0.05161721344472339,
+        "population_score": 0.04863900044622936,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73183089247239,
+          30.256038905259356
+        ]
+      },
+      "properties": {
+        "rank": 39,
+        "site_id": "NPA_66",
+        "node_weight": 0.09754418991634427,
+        "population_score": 0.0868118940408097,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73887968200255,
+          30.387805250226236
+        ]
+      },
+      "properties": {
+        "rank": 40,
+        "site_id": "NPA_68",
+        "node_weight": 0.03424168161918265,
+        "population_score": 0.0,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74653208732367,
+          30.287760932364648
+        ]
+      },
+      "properties": {
+        "rank": 41,
+        "site_id": "NPA_69",
+        "node_weight": 0.5499966655134501,
+        "population_score": 0.5704433897204981,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75825206515141,
+          30.2502188872963
+        ]
+      },
+      "properties": {
+        "rank": 42,
+        "site_id": "NPA_1",
+        "node_weight": 0.2548937481888103,
+        "population_score": 0.181534217678796,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7875987203052,
+          30.219054015311258
+        ]
+      },
+      "properties": {
+        "rank": 43,
+        "site_id": "NPA_2",
+        "node_weight": 0.1427124801347019,
+        "population_score": 0.16912092815707275,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71851659163742,
+          30.331407454367074
+        ]
+      },
+      "properties": {
+        "rank": 44,
+        "site_id": "NPA_3",
+        "node_weight": 0.25373635689511803,
+        "population_score": 0.1577623625816397,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79684994716219,
+          30.225462894577415
+        ]
+      },
+      "properties": {
+        "rank": 45,
+        "site_id": "NPA_4",
+        "node_weight": 0.09830395705314476,
+        "population_score": 0.057279623544683786,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76927910155779,
+          30.224193271295857
+        ]
+      },
+      "properties": {
+        "rank": 46,
+        "site_id": "NPA_5",
+        "node_weight": 0.10683844114835275,
+        "population_score": 0.04863900044622936,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75198464204773,
+          30.22917768890592
+        ]
+      },
+      "properties": {
+        "rank": 47,
+        "site_id": "NPA_6",
+        "node_weight": 0.09720628065863983,
+        "population_score": 0.17711249036550242,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70922783040521,
+          30.37011160713379
+        ]
+      },
+      "properties": {
+        "rank": 48,
+        "site_id": "NPA_7",
+        "node_weight": 1.0,
+        "population_score": 1.0,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7922968780502,
+          30.223168034514842
+        ]
+      },
+      "properties": {
+        "rank": 49,
+        "site_id": "NPA_8",
+        "node_weight": 0.19860305671749556,
+        "population_score": 0.16912092815707275,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7196082656271,
+          30.266054253993488
+        ]
+      },
+      "properties": {
+        "rank": 50,
+        "site_id": "NPA_9",
+        "node_weight": 0.2900720898016527,
+        "population_score": 0.20384568577339662,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    }
+  ]
+}

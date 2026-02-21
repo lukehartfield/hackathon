@@ -1,0 +1,4 @@
+stations_added,selected_sites,coverage_ratio,aggregate_marginal_demand_gain,baseline_coverage_ratio,effective_service_radius_km
+10,10,0.9761904761904762,3.046067060891594,1.0,0.9900441608055851
+25,25,1.0,3.264007735610095,1.0,0.9900441608055851
+50,50,1.0,3.264007735610095,1.0,0.9900441608055851

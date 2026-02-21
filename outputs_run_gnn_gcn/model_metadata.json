@@ -1,0 +1,21 @@
+{
+  "model_type": "gcn",
+  "feature_names": [
+    "traffic_score",
+    "parking_score",
+    "charger_gap_score",
+    "distance_to_nearest_existing",
+    "demand_proxy"
+  ],
+  "target_source": "proxy_target",
+  "epochs": 180,
+  "hidden_dim": 32,
+  "dropout": 0.15,
+  "learning_rate": 0.01,
+  "weight_decay": 0.0001,
+  "validation_mse": 0.018231069669127464,
+  "data_mode": "npa_geojson",
+  "baseline_coverage_ratio": 1.0,
+  "effective_service_radius_km": 0.9900441608055851,
+  "service_radius_tuned": true
+}
