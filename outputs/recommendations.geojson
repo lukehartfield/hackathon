@@ -1,0 +1,855 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7444382,
+          30.2694321
+        ]
+      },
+      "properties": {
+        "rank": 1,
+        "site_id": "PK_651",
+        "node_weight": 0.6011803570403913,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7502441,
+          30.2707939
+        ]
+      },
+      "properties": {
+        "rank": 2,
+        "site_id": "PK_384",
+        "node_weight": 0.5193094011138852,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7480545,
+          30.2670021
+        ]
+      },
+      "properties": {
+        "rank": 3,
+        "site_id": "PK_12",
+        "node_weight": 0.44877942474544497,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7459106,
+          30.2643223
+        ]
+      },
+      "properties": {
+        "rank": 4,
+        "site_id": "PK_400",
+        "node_weight": 0.4886696176520139,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7422867,
+          30.2722073
+        ]
+      },
+      "properties": {
+        "rank": 5,
+        "site_id": "PK_26",
+        "node_weight": 0.5053559317285021,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7387695,
+          30.2680492
+        ]
+      },
+      "properties": {
+        "rank": 6,
+        "site_id": "PK_427",
+        "node_weight": 0.4673131543216974,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7375488,
+          30.2658691
+        ]
+      },
+      "properties": {
+        "rank": 7,
+        "site_id": "PK_1611",
+        "node_weight": 0.5365375713374182,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7379837,
+          30.2688885
+        ]
+      },
+      "properties": {
+        "rank": 8,
+        "site_id": "PK_359",
+        "node_weight": 0.4370690522217267,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7377625,
+          30.2739544
+        ]
+      },
+      "properties": {
+        "rank": 9,
+        "site_id": "PK_1281",
+        "node_weight": 0.4906409065898735,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7432175,
+          30.2633591
+        ]
+      },
+      "properties": {
+        "rank": 10,
+        "site_id": "PK_388",
+        "node_weight": 0.488091571801868,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7372818,
+          30.2690849
+        ]
+      },
+      "properties": {
+        "rank": 11,
+        "site_id": "PK_1602",
+        "node_weight": 0.4255971197821985,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7402802,
+          30.268158
+        ]
+      },
+      "properties": {
+        "rank": 12,
+        "site_id": "PK_52",
+        "node_weight": 0.5225663275482623,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7400208,
+          30.2695103
+        ]
+      },
+      "properties": {
+        "rank": 13,
+        "site_id": "PK_82",
+        "node_weight": 0.4968666486110282,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.742775,
+          30.2735691
+        ]
+      },
+      "properties": {
+        "rank": 14,
+        "site_id": "PK_397",
+        "node_weight": 0.5779343389884265,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7394485,
+          30.2680206
+        ]
+      },
+      "properties": {
+        "rank": 15,
+        "site_id": "PK_54",
+        "node_weight": 0.5452929390914834,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7437592,
+          30.2736588
+        ]
+      },
+      "properties": {
+        "rank": 16,
+        "site_id": "PK_28",
+        "node_weight": 0.6088320201777975,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7447052,
+          30.2653408
+        ]
+      },
+      "properties": {
+        "rank": 17,
+        "site_id": "PK_41",
+        "node_weight": 0.4507701255176483,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7422943,
+          30.2709198
+        ]
+      },
+      "properties": {
+        "rank": 18,
+        "site_id": "PK_385",
+        "node_weight": 0.6597453978569586,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7382278,
+          30.2678967
+        ]
+      },
+      "properties": {
+        "rank": 19,
+        "site_id": "PK_428",
+        "node_weight": 0.48594603604477093,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7375336,
+          30.2691097
+        ]
+      },
+      "properties": {
+        "rank": 20,
+        "site_id": "PK_342",
+        "node_weight": 0.4550432571539407,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7451324,
+          30.2693539
+        ]
+      },
+      "properties": {
+        "rank": 21,
+        "site_id": "PK_365",
+        "node_weight": 0.5801955063205954,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7381058,
+          30.2678623
+        ]
+      },
+      "properties": {
+        "rank": 22,
+        "site_id": "PK_352",
+        "node_weight": 0.4897552970811361,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7468948,
+          30.2722206
+        ]
+      },
+      "properties": {
+        "rank": 23,
+        "site_id": "PK_371",
+        "node_weight": 0.605084350903336,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7422104,
+          30.2687893
+        ]
+      },
+      "properties": {
+        "rank": 24,
+        "site_id": "PK_90",
+        "node_weight": 0.5618056354791832,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7437744,
+          30.272974
+        ]
+      },
+      "properties": {
+        "rank": 25,
+        "site_id": "PK_964",
+        "node_weight": 0.7011418790407731,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7427216,
+          30.2661114
+        ]
+      },
+      "properties": {
+        "rank": 26,
+        "site_id": "PK_344",
+        "node_weight": 0.5193985567731748,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7350388,
+          30.2661438
+        ]
+      },
+      "properties": {
+        "rank": 27,
+        "site_id": "PK_348",
+        "node_weight": 0.3713239939384657,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7368698,
+          30.2685795
+        ]
+      },
+      "properties": {
+        "rank": 28,
+        "site_id": "PK_1605",
+        "node_weight": 0.4611445636225914,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.748848,
+          30.2696571
+        ]
+      },
+      "properties": {
+        "rank": 29,
+        "site_id": "PK_345",
+        "node_weight": 0.5109799963634001,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7504196,
+          30.2710266
+        ]
+      },
+      "properties": {
+        "rank": 30,
+        "site_id": "PK_647",
+        "node_weight": 0.5483350645593048,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7340622,
+          30.2662849
+        ]
+      },
+      "properties": {
+        "rank": 31,
+        "site_id": "PK_336",
+        "node_weight": 0.3210696301563281,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7449341,
+          30.2659492
+        ]
+      },
+      "properties": {
+        "rank": 32,
+        "site_id": "PK_38",
+        "node_weight": 0.47048851724952245,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7379913,
+          30.2610703
+        ]
+      },
+      "properties": {
+        "rank": 33,
+        "site_id": "PK_57",
+        "node_weight": 0.48055666238157846,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7496185,
+          30.2692986
+        ]
+      },
+      "properties": {
+        "rank": 34,
+        "site_id": "PK_405",
+        "node_weight": 0.5169549163140312,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7383957,
+          30.268795
+        ]
+      },
+      "properties": {
+        "rank": 35,
+        "site_id": "PK_331",
+        "node_weight": 0.4653759307264698,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7460403,
+          30.2742882
+        ]
+      },
+      "properties": {
+        "rank": 36,
+        "site_id": "PK_7",
+        "node_weight": 0.6978789061312417,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7395325,
+          30.2691135
+        ]
+      },
+      "properties": {
+        "rank": 37,
+        "site_id": "PK_355",
+        "node_weight": 0.48170540886743024,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7421951,
+          30.2630081
+        ]
+      },
+      "properties": {
+        "rank": 38,
+        "site_id": "PK_410",
+        "node_weight": 0.5078454570474412,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7354431,
+          30.2669029
+        ]
+      },
+      "properties": {
+        "rank": 39,
+        "site_id": "PK_68",
+        "node_weight": 0.46632761575988485,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7399292,
+          30.2702389
+        ]
+      },
+      "properties": {
+        "rank": 40,
+        "site_id": "PK_326",
+        "node_weight": 0.5340314050122694,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7438889,
+          30.2726765
+        ]
+      },
+      "properties": {
+        "rank": 41,
+        "site_id": "PK_963",
+        "node_weight": 0.7139520150330709,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7445068,
+          30.2677994
+        ]
+      },
+      "properties": {
+        "rank": 42,
+        "site_id": "PK_378",
+        "node_weight": 0.564833802004579,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7378159,
+          30.2644234
+        ]
+      },
+      "properties": {
+        "rank": 43,
+        "site_id": "PK_395",
+        "node_weight": 0.6006023680050133,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7442398,
+          30.265501
+        ]
+      },
+      "properties": {
+        "rank": 44,
+        "site_id": "PK_435",
+        "node_weight": 0.459008837822698,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7446365,
+          30.2656403
+        ]
+      },
+      "properties": {
+        "rank": 45,
+        "site_id": "PK_40",
+        "node_weight": 0.4568281435110918,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.734726,
+          30.2664394
+        ]
+      },
+      "properties": {
+        "rank": 46,
+        "site_id": "PK_335",
+        "node_weight": 0.3722577554782307,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.745575,
+          30.2697163
+        ]
+      },
+      "properties": {
+        "rank": 47,
+        "site_id": "PK_363",
+        "node_weight": 0.6061601717049964,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7443695,
+          30.2727089
+        ]
+      },
+      "properties": {
+        "rank": 48,
+        "site_id": "PK_965",
+        "node_weight": 0.6871501717664137,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7432327,
+          30.2736969
+        ]
+      },
+      "properties": {
+        "rank": 49,
+        "site_id": "PK_396",
+        "node_weight": 0.5931550911574729,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7454376,
+          30.2638435
+        ]
+      },
+      "properties": {
+        "rank": 50,
+        "site_id": "PK_45",
+        "node_weight": 0.47037297297697794,
+        "marginal_demand_gain": 0.0,
+        "cumulative_coverage": 1.0
+      }
+    }
+  ]
+}
