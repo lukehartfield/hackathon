@@ -1,0 +1,2521 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75174518001657,
+          30.259995483521102
+        ]
+      },
+      "properties": {
+        "site_id": "EX_000",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81796767071705,
+          30.260820585810855
+        ]
+      },
+      "properties": {
+        "site_id": "EX_001",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73870035482352,
+          30.28893801671297
+        ]
+      },
+      "properties": {
+        "site_id": "EX_002",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77288180609924,
+          30.193665691412612
+        ]
+      },
+      "properties": {
+        "site_id": "EX_003",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79152769270448,
+          30.190106232090812
+        ]
+      },
+      "properties": {
+        "site_id": "EX_004",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.78630168323912,
+          30.252602397532495
+        ]
+      },
+      "properties": {
+        "site_id": "EX_005",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71382059132226,
+          30.30634471843537
+        ]
+      },
+      "properties": {
+        "site_id": "EX_006",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81882601958625,
+          30.29561253437927
+        ]
+      },
+      "properties": {
+        "site_id": "EX_007",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72330974986431,
+          30.303850103060014
+        ]
+      },
+      "properties": {
+        "site_id": "EX_008",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77957232208296,
+          30.198160753312944
+        ]
+      },
+      "properties": {
+        "site_id": "EX_009",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75221612841223,
+          30.36509265449146
+        ]
+      },
+      "properties": {
+        "site_id": "EX_010",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77896855469082,
+          30.23585072673902
+        ]
+      },
+      "properties": {
+        "site_id": "EX_011",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81549904655782,
+          30.244588248381095
+        ]
+      },
+      "properties": {
+        "site_id": "EX_012",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75107590079489,
+          30.23058960993621
+        ]
+      },
+      "properties": {
+        "site_id": "EX_013",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.8312874810309,
+          30.228783833316406
+        ]
+      },
+      "properties": {
+        "site_id": "EX_014",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79073601069194,
+          30.28436550601192
+        ]
+      },
+      "properties": {
+        "site_id": "EX_015",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68590867185851,
+          30.280882338495466
+        ]
+      },
+      "properties": {
+        "site_id": "EX_016",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67953394669698,
+          30.32003558936781
+        ]
+      },
+      "properties": {
+        "site_id": "EX_017",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77333261809609,
+          30.307636661898822
+        ]
+      },
+      "properties": {
+        "site_id": "EX_018",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74440586996164,
+          30.24540900714467
+        ]
+      },
+      "properties": {
+        "site_id": "EX_019",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.80671737355264,
+          30.205508639665542
+        ]
+      },
+      "properties": {
+        "site_id": "EX_020",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6302841351946,
+          30.14458694909879
+        ]
+      },
+      "properties": {
+        "site_id": "EX_021",
+        "community_id": 1,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76543519775163,
+          30.25673839271897
+        ]
+      },
+      "properties": {
+        "site_id": "EX_022",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7086558067867,
+          30.308018724830735
+        ]
+      },
+      "properties": {
+        "site_id": "EX_023",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75798571576192,
+          30.350596908925365
+        ]
+      },
+      "properties": {
+        "site_id": "EX_024",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79301943390627,
+          30.29961925520388
+        ]
+      },
+      "properties": {
+        "site_id": "EX_025",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7643655402253,
+          30.18301391973761
+        ]
+      },
+      "properties": {
+        "site_id": "EX_026",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74135784488004,
+          30.24290724714871
+        ]
+      },
+      "properties": {
+        "site_id": "EX_027",
+        "community_id": 0,
+        "is_existing": true,
+        "distance_to_nearest_existing_km": 0.0,
+        "node_weight": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69124556983442,
+          30.270641593359233
+        ]
+      },
+      "properties": {
+        "site_id": "CA_000",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.2487327586295411,
+        "node_weight": 0.4446308981391136
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.92008045202893,
+          30.345141005651453
+        ]
+      },
+      "properties": {
+        "site_id": "CA_001",
+        "community_id": 2,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 11.170860796314113,
+        "node_weight": 0.6197371398657782
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75688520600163,
+          30.306931965678665
+        ]
+      },
+      "properties": {
+        "site_id": "CA_002",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.580863040606912,
+        "node_weight": 0.5810983202955443
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79383169597878,
+          30.373127238728028
+        ]
+      },
+      "properties": {
+        "site_id": "CA_003",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.091230323076529,
+        "node_weight": 0.6629861552456797
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.80275536920347,
+          30.23522286420324
+        ]
+      },
+      "properties": {
+        "site_id": "CA_004",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.6072229200311239,
+        "node_weight": 0.5535008984343639
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73744882949079,
+          30.28048152344885
+        ]
+      },
+      "properties": {
+        "site_id": "CA_005",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.947966947077172,
+        "node_weight": 0.43026478784802313
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76663478313921,
+          30.26081577037128
+        ]
+      },
+      "properties": {
+        "site_id": "CA_006",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.46779401946758714,
+        "node_weight": 0.14301195177605372
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74812381561607,
+          30.210867088751613
+        ]
+      },
+      "properties": {
+        "site_id": "CA_007",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.2113112476926253,
+        "node_weight": 0.5913969034324886
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.8048820126553,
+          30.334997418168395
+        ]
+      },
+      "properties": {
+        "site_id": "CA_008",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.095352973661954,
+        "node_weight": 0.4772919692863772
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6857458878007,
+          30.352367854976322
+        ]
+      },
+      "properties": {
+        "site_id": "CA_009",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.6442766184867885,
+        "node_weight": 0.5636846514230919
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70907927127655,
+          30.36326290278612
+        ]
+      },
+      "properties": {
+        "site_id": "CA_010",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.143647575077993,
+        "node_weight": 0.566408559252799
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77508758676694,
+          30.27772521435462
+        ]
+      },
+      "properties": {
+        "site_id": "CA_011",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.6742322928098479,
+        "node_weight": 0.3373294593862183
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6717983847666,
+          30.298862514807027
+        ]
+      },
+      "properties": {
+        "site_id": "CA_012",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.4150990638427863,
+        "node_weight": 0.631007295137521
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76809009633703,
+          30.286828625214948
+        ]
+      },
+      "properties": {
+        "site_id": "CA_013",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.1916260035751387,
+        "node_weight": 0.5335637393440548
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6783079303635,
+          30.364813761697803
+        ]
+      },
+      "properties": {
+        "site_id": "CA_014",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.980495424738419,
+        "node_weight": 0.4837327089990656
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.85660254107773,
+          30.366823694630117
+        ]
+      },
+      "properties": {
+        "site_id": "CA_015",
+        "community_id": 3,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 8.708884439221311,
+        "node_weight": 0.409586757084284
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79778537912021,
+          30.377105215556444
+        ]
+      },
+      "properties": {
+        "site_id": "CA_016",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.571218002971293,
+        "node_weight": 0.5920150888146439
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.84392809269274,
+          30.288650342663693
+        ]
+      },
+      "properties": {
+        "site_id": "CA_017",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.53140620756072,
+        "node_weight": 0.44573707279639396
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7020734576345,
+          30.373777539640955
+        ]
+      },
+      "properties": {
+        "site_id": "CA_018",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.906520818881108,
+        "node_weight": 0.3432775689919296
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72027076500139,
+          30.111777426396465
+        ]
+      },
+      "properties": {
+        "site_id": "CA_019",
+        "community_id": 4,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 8.984495912945723,
+        "node_weight": 0.5550824970146984
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76430603114565,
+          30.28288208377351
+        ]
+      },
+      "properties": {
+        "site_id": "CA_020",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.543194141141903,
+        "node_weight": 0.48424043559909674
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77571464057374,
+          30.352051617959862
+        ]
+      },
+      "properties": {
+        "site_id": "CA_021",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.7088504107826137,
+        "node_weight": 0.3455947689154586
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81857379896122,
+          30.21753683517005
+        ]
+      },
+      "properties": {
+        "site_id": "CA_022",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.7481908324035873,
+        "node_weight": 0.3347434274356116
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6925082382664,
+          30.245614323871266
+        ]
+      },
+      "properties": {
+        "site_id": "CA_023",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.9725152850319763,
+        "node_weight": 0.48459936985521057
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81384483311679,
+          30.41516456703585
+        ]
+      },
+      "properties": {
+        "site_id": "CA_024",
+        "community_id": 5,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 8.120492470958892,
+        "node_weight": 0.5088579506121588
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69200234987419,
+          30.33754730951028
+        ]
+      },
+      "properties": {
+        "site_id": "CA_025",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.285538656476384,
+        "node_weight": 0.45705129362694197
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72115338019682,
+          30.314773413804772
+        ]
+      },
+      "properties": {
+        "site_id": "CA_026",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.1721288411166946,
+        "node_weight": 0.26850965647323366
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.55286340275588,
+          30.202044561089398
+        ]
+      },
+      "properties": {
+        "site_id": "CA_027",
+        "community_id": 6,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 9.808580097794326,
+        "node_weight": 0.7720009634660916
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79766267822068,
+          30.11444973235695
+        ]
+      },
+      "properties": {
+        "site_id": "CA_028",
+        "community_id": 7,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 8.26895295800257,
+        "node_weight": 0.5466543797868261
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.8167517648891,
+          30.35590318853633
+        ]
+      },
+      "properties": {
+        "site_id": "CA_029",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.669565897674585,
+        "node_weight": 0.3997841555935329
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.65400525223806,
+          30.208370468156225
+        ]
+      },
+      "properties": {
+        "site_id": "CA_030",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 7.449937383830582,
+        "node_weight": 0.6883842251577127
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75543150947637,
+          30.286143411651512
+        ]
+      },
+      "properties": {
+        "site_id": "CA_031",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.636260199516248,
+        "node_weight": 0.5187094125689163
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.71102455716711,
+          30.248621207287105
+        ]
+      },
+      "properties": {
+        "site_id": "CA_032",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.9822309773500573,
+        "node_weight": 0.6316532902006097
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.82944825504092,
+          30.242505720154487
+        ]
+      },
+      "properties": {
+        "site_id": "CA_033",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.3598289205953042,
+        "node_weight": 0.41146351301043343
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7278251610009,
+          30.278437099064877
+        ]
+      },
+      "properties": {
+        "site_id": "CA_034",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.5664799203817585,
+        "node_weight": 0.4386490540779547
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72577850491864,
+          30.33158218573172
+        ]
+      },
+      "properties": {
+        "site_id": "CA_035",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.0319370841771867,
+        "node_weight": 0.7230832328849949
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.66052553106589,
+          30.20078154885194
+        ]
+      },
+      "properties": {
+        "site_id": "CA_036",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 6.891707120473609,
+        "node_weight": 0.6406642749306404
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.87695498597877,
+          30.400572636596355
+        ]
+      },
+      "properties": {
+        "site_id": "CA_037",
+        "community_id": 8,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 12.599068538236338,
+        "node_weight": 0.8035556298244755
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.63603619081215,
+          30.332807151532947
+        ]
+      },
+      "properties": {
+        "site_id": "CA_038",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.409812212120385,
+        "node_weight": 0.4132254483998493
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79895146360964,
+          30.375947202947536
+        ]
+      },
+      "properties": {
+        "site_id": "CA_039",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.6432199654632,
+        "node_weight": 0.6270045878505096
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70188005545029,
+          30.267674691879325
+        ]
+      },
+      "properties": {
+        "site_id": "CA_040",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.1234892840519675,
+        "node_weight": 0.5189625007796528
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73454691357703,
+          30.221282464352853
+        ]
+      },
+      "properties": {
+        "site_id": "CA_041",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.895517699705848,
+        "node_weight": 0.6300351230776733
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77905754487115,
+          30.301533322665033
+        ]
+      },
+      "properties": {
+        "site_id": "CA_042",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.8732907965431561,
+        "node_weight": 0.39799385427469613
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69214632970379,
+          30.376512976034977
+        ]
+      },
+      "properties": {
+        "site_id": "CA_043",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.901099537746414,
+        "node_weight": 0.5819980319779376
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79532034928977,
+          30.302050375746724
+        ]
+      },
+      "properties": {
+        "site_id": "CA_044",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.3491035488845142,
+        "node_weight": 0.3596738863729224
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.84040594904984,
+          30.09174429152958
+        ]
+      },
+      "properties": {
+        "site_id": "CA_045",
+        "community_id": 9,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 11.904499578975111,
+        "node_weight": 0.5251783371761446
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.8161070880667,
+          30.284208281329644
+        ]
+      },
+      "properties": {
+        "site_id": "CA_046",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.2946878546306841,
+        "node_weight": 0.6068987263501566
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72348388304485,
+          30.2749553412475
+        ]
+      },
+      "properties": {
+        "site_id": "CA_047",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.133614335368648,
+        "node_weight": 0.5840959503504604
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.89636858296072,
+          30.202987560843884
+        ]
+      },
+      "properties": {
+        "site_id": "CA_048",
+        "community_id": 10,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 6.879955354282409,
+        "node_weight": 0.6099852339897132
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79286910443653,
+          30.416766255343447
+        ]
+      },
+      "properties": {
+        "site_id": "CA_049",
+        "community_id": 5,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 6.943992385737238,
+        "node_weight": 0.6246191236003644
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79202347947854,
+          30.33457908027136
+        ]
+      },
+      "properties": {
+        "site_id": "CA_050",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.491952867212181,
+        "node_weight": 0.6148431170408558
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7584173228383,
+          30.224156604371096
+        ]
+      },
+      "properties": {
+        "site_id": "CA_051",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.004578734837153,
+        "node_weight": 0.5361231245547431
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.66242120980104,
+          30.308930909664287
+        ]
+      },
+      "properties": {
+        "site_id": "CA_052",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.0550068914330604,
+        "node_weight": 0.5611689975746181
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.62404982249204,
+          30.297621273669154
+        ]
+      },
+      "properties": {
+        "site_id": "CA_053",
+        "community_id": 11,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.880574823054393,
+        "node_weight": 0.5851585798387012
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81787252405601,
+          30.22947193805766
+        ]
+      },
+      "properties": {
+        "site_id": "CA_054",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.2911048083604912,
+        "node_weight": 0.6304214353083941
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79116690642236,
+          30.236206685661344
+        ]
+      },
+      "properties": {
+        "site_id": "CA_055",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.1725368446529074,
+        "node_weight": 0.41978967248177557
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75831470980376,
+          30.316108567753236
+        ]
+      },
+      "properties": {
+        "site_id": "CA_056",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.7221214293551874,
+        "node_weight": 0.4313069622486892
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68549229925341,
+          30.459987129136326
+        ]
+      },
+      "properties": {
+        "site_id": "CA_057",
+        "community_id": 12,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 12.34020045904719,
+        "node_weight": 0.7591506592735274
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.80322120539938,
+          30.33638418109893
+        ]
+      },
+      "properties": {
+        "site_id": "CA_058",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.20371980064861,
+        "node_weight": 0.6053915518462925
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.65767813441758,
+          30.331276691884042
+        ]
+      },
+      "properties": {
+        "site_id": "CA_059",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.441889330942964,
+        "node_weight": 0.8107177522343673
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79151497019505,
+          30.275938576062526
+        ]
+      },
+      "properties": {
+        "site_id": "CA_060",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.9400125730163693,
+        "node_weight": 0.5997827389152235
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79828112347532,
+          30.1209055681196
+        ]
+      },
+      "properties": {
+        "site_id": "CA_061",
+        "community_id": 7,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 7.637319911795341,
+        "node_weight": 0.42173534700043097
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76050786464862,
+          30.179344048979736
+        ]
+      },
+      "properties": {
+        "site_id": "CA_062",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.5513785095735528,
+        "node_weight": 0.387442712332658
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.87864271327864,
+          30.325861149523064
+        ]
+      },
+      "properties": {
+        "site_id": "CA_063",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 6.654669018701933,
+        "node_weight": 0.660365222092668
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.62597650100435,
+          30.342401052907054
+        ]
+      },
+      "properties": {
+        "site_id": "CA_064",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.710166421085048,
+        "node_weight": 0.6847961623733902
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.62349338092311,
+          30.246471361578546
+        ]
+      },
+      "properties": {
+        "site_id": "CA_065",
+        "community_id": 13,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 7.111521384831247,
+        "node_weight": 0.5451419125461923
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79293698506581,
+          30.25558070005866
+        ]
+      },
+      "properties": {
+        "site_id": "CA_066",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.7182296044424762,
+        "node_weight": 0.43447494070283593
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68723283466983,
+          30.307346054778204
+        ]
+      },
+      "properties": {
+        "site_id": "CA_067",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.5928339401697078,
+        "node_weight": 0.30027141059345597
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67460680777907,
+          30.22905008465777
+        ]
+      },
+      "properties": {
+        "site_id": "CA_068",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.864821543087357,
+        "node_weight": 0.5146699687731614
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.91095353315345,
+          30.288186040712475
+        ]
+      },
+      "properties": {
+        "site_id": "CA_069",
+        "community_id": 14,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 8.883914318485745,
+        "node_weight": 0.5767340604334694
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7189684767351,
+          30.10152727305103
+        ]
+      },
+      "properties": {
+        "site_id": "CA_070",
+        "community_id": 4,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 9.781470962286358,
+        "node_weight": 0.6210315216542976
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81779652844654,
+          30.311838260086507
+        ]
+      },
+      "properties": {
+        "site_id": "CA_071",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.806923317328832,
+        "node_weight": 0.677124202390875
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73897037286837,
+          30.211463149786226
+        ]
+      },
+      "properties": {
+        "site_id": "CA_072",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.4240460078410013,
+        "node_weight": 0.554652875536657
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.85034911585313,
+          30.30066853351867
+        ]
+      },
+      "properties": {
+        "site_id": "CA_073",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.0782140376257345,
+        "node_weight": 0.8292610275429138
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.77555575810992,
+          30.118150823109858
+        ]
+      },
+      "properties": {
+        "site_id": "CA_074",
+        "community_id": 7,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 7.292260932357066,
+        "node_weight": 0.6128821436116886
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68214231169867,
+          30.140535901358064
+        ]
+      },
+      "properties": {
+        "site_id": "CA_075",
+        "community_id": 15,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.006934346811816,
+        "node_weight": 0.4133530696475208
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72526279789865,
+          30.206234086609406
+        ]
+      },
+      "properties": {
+        "site_id": "CA_076",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.6723362871730423,
+        "node_weight": 0.7117542372432146
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.68024080758654,
+          30.15014801013026
+        ]
+      },
+      "properties": {
+        "site_id": "CA_077",
+        "community_id": 15,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.843186871391411,
+        "node_weight": 0.5585449632353974
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75794075950246,
+          30.314822106173775
+        ]
+      },
+      "properties": {
+        "site_id": "CA_078",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.679723100162897,
+        "node_weight": 0.37095991414221147
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73287814644537,
+          30.318962573278043
+        ]
+      },
+      "properties": {
+        "site_id": "CA_079",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.9150727926063007,
+        "node_weight": 0.5722356785926885
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73739459605315,
+          30.233171591660856
+        ]
+      },
+      "properties": {
+        "site_id": "CA_080",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.1475555857470383,
+        "node_weight": 0.4334761494681455
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67301275491957,
+          30.202293357851108
+        ]
+      },
+      "properties": {
+        "site_id": "CA_081",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 7.618707650112948,
+        "node_weight": 0.8495896924834414
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69132967555562,
+          30.298361263999425
+        ]
+      },
+      "properties": {
+        "site_id": "CA_082",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.9798717455614756,
+        "node_weight": 0.6082220417993184
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.78019260087918,
+          30.324076962232073
+        ]
+      },
+      "properties": {
+        "site_id": "CA_083",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.9430581416825863,
+        "node_weight": 0.5712979934838385
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.78876475509567,
+          30.292518418020418
+        ]
+      },
+      "properties": {
+        "site_id": "CA_084",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.8889848925188013,
+        "node_weight": 0.45214690177166833
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.86043489188572,
+          30.309883373004876
+        ]
+      },
+      "properties": {
+        "site_id": "CA_085",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.298203891738141,
+        "node_weight": 0.509445717757707
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76557660443973,
+          30.25323548514648
+        ]
+      },
+      "properties": {
+        "site_id": "CA_086",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.38974227999499983,
+        "node_weight": 0.26385927368344
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73850838652615,
+          30.192712093170403
+        ]
+      },
+      "properties": {
+        "site_id": "CA_087",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.7091355867974958,
+        "node_weight": 0.591552804947328
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.70737217203147,
+          30.292145578587657
+        ]
+      },
+      "properties": {
+        "site_id": "CA_088",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.6959085984961866,
+        "node_weight": 0.46936029331418394
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.80156995192331,
+          30.37295385627093
+        ]
+      },
+      "properties": {
+        "site_id": "CA_089",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.814896801116002,
+        "node_weight": 0.6556075663053402
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69588804035709,
+          30.244142937587238
+        ]
+      },
+      "properties": {
+        "site_id": "CA_090",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.196158614946823,
+        "node_weight": 0.6580736315325378
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.8340252800178,
+          30.267472100802664
+        ]
+      },
+      "properties": {
+        "site_id": "CA_091",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.7103629231496251,
+        "node_weight": 0.497776321567456
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6709823082547,
+          30.230446113746996
+        ]
+      },
+      "properties": {
+        "site_id": "CA_092",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.788597726332418,
+        "node_weight": 0.4683923982174608
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.82500341833233,
+          30.14854426616139
+        ]
+      },
+      "properties": {
+        "site_id": "CA_093",
+        "community_id": 16,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.631550617362834,
+        "node_weight": 0.5679240769610967
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67170961513054,
+          30.27108113842135
+        ]
+      },
+      "properties": {
+        "site_id": "CA_094",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.745548155454374,
+        "node_weight": 0.44081363779179367
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81724712938093,
+          30.249074507931592
+        ]
+      },
+      "properties": {
+        "site_id": "CA_095",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.5263519761518803,
+        "node_weight": 0.19387460409366467
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.63981279304579,
+          30.271547330053068
+        ]
+      },
+      "properties": {
+        "site_id": "CA_096",
+        "community_id": 11,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.546593439139225,
+        "node_weight": 0.5283966385600168
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.74497316470743,
+          30.355689154160604
+        ]
+      },
+      "properties": {
+        "site_id": "CA_097",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.2554907436267477,
+        "node_weight": 0.3235057143386535
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.63204220129992,
+          30.280848588857474
+        ]
+      },
+      "properties": {
+        "site_id": "CA_098",
+        "community_id": 11,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.172471783697304,
+        "node_weight": 0.6521406703304917
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7855595592627,
+          30.250439523813096
+        ]
+      },
+      "properties": {
+        "site_id": "CA_099",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.25084216637574086,
+        "node_weight": 0.4373796882771771
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.83725290144992,
+          30.273247082268323
+        ]
+      },
+      "properties": {
+        "site_id": "CA_100",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.310749198932625,
+        "node_weight": 0.73963791097715
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.69754923075155,
+          30.22909042580525
+        ]
+      },
+      "properties": {
+        "site_id": "CA_101",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.480256404608139,
+        "node_weight": 0.49793900296030513
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.72355236764962,
+          30.322007219191608
+        ]
+      },
+      "properties": {
+        "site_id": "CA_102",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.9763107383811847,
+        "node_weight": 0.6878903082869792
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73649205862276,
+          30.275990864809746
+        ]
+      },
+      "properties": {
+        "site_id": "CA_103",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.4551898360214321,
+        "node_weight": 0.38223561994829164
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75458617006396,
+          30.31935160721588
+        ]
+      },
+      "properties": {
+        "site_id": "CA_104",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.2215106326077882,
+        "node_weight": 0.5182771250573589
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.73834016633035,
+          30.17549619132783
+        ]
+      },
+      "properties": {
+        "site_id": "CA_105",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.6376126663194333,
+        "node_weight": 0.5920693278391791
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75238188568908,
+          30.2952415813048
+        ]
+      },
+      "properties": {
+        "site_id": "CA_106",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.4889092714712877,
+        "node_weight": 0.39951169030323097
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.79828414218603,
+          30.187222948882333
+        ]
+      },
+      "properties": {
+        "site_id": "CA_107",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.7242205500850769,
+        "node_weight": 0.5917651908957244
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.65391162326621,
+          30.239852139074728
+        ]
+      },
+      "properties": {
+        "site_id": "CA_108",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.500829834148146,
+        "node_weight": 0.5178321672305369
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.75103763115494,
+          30.298202985298406
+        ]
+      },
+      "properties": {
+        "site_id": "CA_109",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.5698524388361987,
+        "node_weight": 0.5493875897417775
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7177859665615,
+          30.312443148152294
+        ]
+      },
+      "properties": {
+        "site_id": "CA_110",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.7776511915207048,
+        "node_weight": 0.26705526528474116
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81631448319588,
+          30.23787717030795
+        ]
+      },
+      "properties": {
+        "site_id": "CA_111",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 0.7503379041594881,
+        "node_weight": 0.18132059657053157
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.76386943587393,
+          30.284295704033813
+        ]
+      },
+      "properties": {
+        "site_id": "CA_112",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 2.4712075765647694,
+        "node_weight": 0.4708407142809168
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81066366750552,
+          30.160424937109845
+        ]
+      },
+      "properties": {
+        "site_id": "CA_113",
+        "community_id": 16,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 3.7784137911822917,
+        "node_weight": 0.3576071764959802
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6988050593506,
+          30.299813887535834
+        ]
+      },
+      "properties": {
+        "site_id": "CA_114",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 1.3140312318168317,
+        "node_weight": 0.25335429193016085
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.81649983393127,
+          30.159259680755014
+        ]
+      },
+      "properties": {
+        "site_id": "CA_115",
+        "community_id": 16,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.186553464648389,
+        "node_weight": 0.6896166194171586
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.67612040562078,
+          30.243517022589003
+        ]
+      },
+      "properties": {
+        "site_id": "CA_116",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.259859697811409,
+        "node_weight": 0.5068363874983455
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.82797384499924,
+          30.147298191543836
+        ]
+      },
+      "properties": {
+        "site_id": "CA_117",
+        "community_id": 16,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.9104856315257805,
+        "node_weight": 0.6188175163616497
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.6391686274626,
+          30.281043793773847
+        ]
+      },
+      "properties": {
+        "site_id": "CA_118",
+        "community_id": 11,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 4.4881943984200925,
+        "node_weight": 0.6360979780569294
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.87247509921183,
+          30.279233050727893
+        ]
+      },
+      "properties": {
+        "site_id": "CA_119",
+        "community_id": 0,
+        "is_existing": false,
+        "distance_to_nearest_existing_km": 5.463751518659032,
+        "node_weight": 0.6205546717436466
+      }
+    }
+  ]
+}

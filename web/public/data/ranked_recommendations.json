@@ -1,0 +1,452 @@
+[
+  {
+    "rank": "1",
+    "site_id": "CA_090",
+    "lat": "30.244142937587238",
+    "lon": "-97.69588804035709",
+    "node_weight": "0.6580736315325378",
+    "marginal_demand_gain": "2.571789611485646",
+    "cumulative_coverage": "0.525"
+  },
+  {
+    "rank": "2",
+    "site_id": "CA_081",
+    "lat": "30.202293357851108",
+    "lon": "-97.67301275491957",
+    "node_weight": "0.8495896924834414",
+    "marginal_demand_gain": "2.1552170000581246",
+    "cumulative_coverage": "0.55"
+  },
+  {
+    "rank": "3",
+    "site_id": "CA_089",
+    "lat": "30.37295385627093",
+    "lon": "-97.80156995192331",
+    "node_weight": "0.6556075663053402",
+    "marginal_demand_gain": "2.287908808228864",
+    "cumulative_coverage": "0.5916666666666667"
+  },
+  {
+    "rank": "4",
+    "site_id": "CA_087",
+    "lat": "30.192712093170403",
+    "lon": "-97.73850838652615",
+    "node_weight": "0.591552804947328",
+    "marginal_demand_gain": "2.0736676605312385",
+    "cumulative_coverage": "0.6166666666666667"
+  },
+  {
+    "rank": "5",
+    "site_id": "CA_098",
+    "lat": "30.280848588857474",
+    "lon": "-97.63204220129992",
+    "node_weight": "0.6521406703304917",
+    "marginal_demand_gain": "2.0114861073182455",
+    "cumulative_coverage": "0.65"
+  },
+  {
+    "rank": "6",
+    "site_id": "CA_073",
+    "lat": "30.30066853351867",
+    "lon": "-97.85034911585313",
+    "node_weight": "0.8292610275429138",
+    "marginal_demand_gain": "1.8503172834244306",
+    "cumulative_coverage": "0.675"
+  },
+  {
+    "rank": "7",
+    "site_id": "CA_115",
+    "lat": "30.159259680755014",
+    "lon": "-97.81649983393127",
+    "node_weight": "0.6896166194171586",
+    "marginal_demand_gain": "1.822112194466202",
+    "cumulative_coverage": "0.7083333333333334"
+  },
+  {
+    "rank": "8",
+    "site_id": "CA_050",
+    "lat": "30.33457908027136",
+    "lon": "-97.79202347947854",
+    "node_weight": "0.6148431170408558",
+    "marginal_demand_gain": "1.5939347000702655",
+    "cumulative_coverage": "0.7333333333333333"
+  },
+  {
+    "rank": "9",
+    "site_id": "CA_043",
+    "lat": "30.376512976034977",
+    "lon": "-97.69214632970379",
+    "node_weight": "0.5819980319779376",
+    "marginal_demand_gain": "1.5588132513299369",
+    "cumulative_coverage": "0.7666666666666667"
+  },
+  {
+    "rank": "10",
+    "site_id": "CA_070",
+    "lat": "30.10152727305103",
+    "lon": "-97.7189684767351",
+    "node_weight": "0.6210315216542976",
+    "marginal_demand_gain": "1.068282804882419",
+    "cumulative_coverage": "0.7833333333333333"
+  },
+  {
+    "rank": "11",
+    "site_id": "CA_074",
+    "lat": "30.118150823109858",
+    "lon": "-97.77555575810992",
+    "node_weight": "0.6128821436116886",
+    "marginal_demand_gain": "0.8107126886529731",
+    "cumulative_coverage": "0.8083333333333333"
+  },
+  {
+    "rank": "12",
+    "site_id": "CA_064",
+    "lat": "30.342401052907054",
+    "lon": "-97.62597650100435",
+    "node_weight": "0.6847961623733902",
+    "marginal_demand_gain": "0.787351518751294",
+    "cumulative_coverage": "0.825"
+  },
+  {
+    "rank": "13",
+    "site_id": "CA_027",
+    "lat": "30.202044561089398",
+    "lon": "-97.55286340275588",
+    "node_weight": "0.7720009634660916",
+    "marginal_demand_gain": "0.7624384124608767",
+    "cumulative_coverage": "0.8333333333333334"
+  },
+  {
+    "rank": "14",
+    "site_id": "CA_108",
+    "lat": "30.239852139074728",
+    "lon": "-97.65391162326621",
+    "node_weight": "0.5178321672305369",
+    "marginal_demand_gain": "0.7942245768599193",
+    "cumulative_coverage": "0.8583333333333333"
+  },
+  {
+    "rank": "15",
+    "site_id": "CA_049",
+    "lat": "30.416766255343447",
+    "lon": "-97.79286910443653",
+    "node_weight": "0.6246191236003644",
+    "marginal_demand_gain": "0.6543951494599172",
+    "cumulative_coverage": "0.875"
+  },
+  {
+    "rank": "16",
+    "site_id": "CA_048",
+    "lat": "30.202987560843884",
+    "lon": "-97.89636858296072",
+    "node_weight": "0.6099852339897132",
+    "marginal_demand_gain": "0.6221205908733352",
+    "cumulative_coverage": "0.8833333333333333"
+  },
+  {
+    "rank": "17",
+    "site_id": "CA_035",
+    "lat": "30.33158218573172",
+    "lon": "-97.72577850491864",
+    "node_weight": "0.7230832328849949",
+    "marginal_demand_gain": "0.5819591220343122",
+    "cumulative_coverage": "0.8916666666666667"
+  },
+  {
+    "rank": "18",
+    "site_id": "CA_001",
+    "lat": "30.345141005651453",
+    "lon": "-97.92008045202893",
+    "node_weight": "0.6197371398657782",
+    "marginal_demand_gain": "0.5902337395861355",
+    "cumulative_coverage": "0.9"
+  },
+  {
+    "rank": "19",
+    "site_id": "CA_037",
+    "lat": "30.400572636596355",
+    "lon": "-97.87695498597877",
+    "node_weight": "0.8035556298244755",
+    "marginal_demand_gain": "0.5498366035904712",
+    "cumulative_coverage": "0.9083333333333333"
+  },
+  {
+    "rank": "20",
+    "site_id": "CA_057",
+    "lat": "30.459987129136326",
+    "lon": "-97.68549229925341",
+    "node_weight": "0.7591506592735274",
+    "marginal_demand_gain": "0.5546310214419468",
+    "cumulative_coverage": "0.9166666666666666"
+  },
+  {
+    "rank": "21",
+    "site_id": "CA_009",
+    "lat": "30.352367854976322",
+    "lon": "-97.6857458878007",
+    "node_weight": "0.5636846514230919",
+    "marginal_demand_gain": "0.5642887523115164",
+    "cumulative_coverage": "0.925"
+  },
+  {
+    "rank": "22",
+    "site_id": "CA_077",
+    "lat": "30.15014801013026",
+    "lon": "-97.68024080758654",
+    "node_weight": "0.5585449632353974",
+    "marginal_demand_gain": "0.5398122661049152",
+    "cumulative_coverage": "0.9416666666666667"
+  },
+  {
+    "rank": "23",
+    "site_id": "CA_065",
+    "lat": "30.246471361578546",
+    "lon": "-97.62349338092311",
+    "node_weight": "0.5451419125461923",
+    "marginal_demand_gain": "0.4702831334392493",
+    "cumulative_coverage": "0.95"
+  },
+  {
+    "rank": "24",
+    "site_id": "CA_063",
+    "lat": "30.325861149523064",
+    "lon": "-97.87864271327864",
+    "node_weight": "0.660365222092668",
+    "marginal_demand_gain": "0.4371584797983746",
+    "cumulative_coverage": "0.9583333333333334"
+  },
+  {
+    "rank": "25",
+    "site_id": "CA_119",
+    "lat": "30.279233050727893",
+    "lon": "-97.87247509921183",
+    "node_weight": "0.6205546717436466",
+    "marginal_demand_gain": "0.4179364504372298",
+    "cumulative_coverage": "0.9666666666666667"
+  },
+  {
+    "rank": "26",
+    "site_id": "CA_069",
+    "lat": "30.288186040712475",
+    "lon": "-97.91095353315345",
+    "node_weight": "0.5767340604334694",
+    "marginal_demand_gain": "0.23987005524503932",
+    "cumulative_coverage": "0.975"
+  },
+  {
+    "rank": "27",
+    "site_id": "CA_015",
+    "lat": "30.366823694630117",
+    "lon": "-97.85660254107773",
+    "node_weight": "0.409586757084284",
+    "marginal_demand_gain": "0.25305052618203705",
+    "cumulative_coverage": "0.9833333333333333"
+  },
+  {
+    "rank": "28",
+    "site_id": "CA_109",
+    "lat": "30.298202985298406",
+    "lon": "-97.75103763115494",
+    "node_weight": "0.5493875897417775",
+    "marginal_demand_gain": "0.1990393317813632",
+    "cumulative_coverage": "0.9916666666666667"
+  },
+  {
+    "rank": "29",
+    "site_id": "CA_045",
+    "lat": "30.09174429152958",
+    "lon": "-97.84040594904984",
+    "node_weight": "0.5251783371761446",
+    "marginal_demand_gain": "0.15689154898288285",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "30",
+    "site_id": "CA_000",
+    "lat": "30.270641593359233",
+    "lon": "-97.69124556983442",
+    "node_weight": "0.4446308981391136",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "31",
+    "site_id": "CA_002",
+    "lat": "30.306931965678665",
+    "lon": "-97.75688520600163",
+    "node_weight": "0.5810983202955443",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "32",
+    "site_id": "CA_003",
+    "lat": "30.373127238728028",
+    "lon": "-97.79383169597878",
+    "node_weight": "0.6629861552456797",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "33",
+    "site_id": "CA_004",
+    "lat": "30.23522286420324",
+    "lon": "-97.80275536920347",
+    "node_weight": "0.5535008984343639",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "34",
+    "site_id": "CA_005",
+    "lat": "30.28048152344885",
+    "lon": "-97.73744882949079",
+    "node_weight": "0.43026478784802313",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "35",
+    "site_id": "CA_006",
+    "lat": "30.26081577037128",
+    "lon": "-97.76663478313921",
+    "node_weight": "0.14301195177605372",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "36",
+    "site_id": "CA_007",
+    "lat": "30.210867088751613",
+    "lon": "-97.74812381561607",
+    "node_weight": "0.5913969034324886",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "37",
+    "site_id": "CA_008",
+    "lat": "30.334997418168395",
+    "lon": "-97.8048820126553",
+    "node_weight": "0.4772919692863772",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "38",
+    "site_id": "CA_010",
+    "lat": "30.36326290278612",
+    "lon": "-97.70907927127655",
+    "node_weight": "0.566408559252799",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "39",
+    "site_id": "CA_011",
+    "lat": "30.27772521435462",
+    "lon": "-97.77508758676694",
+    "node_weight": "0.3373294593862183",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "40",
+    "site_id": "CA_012",
+    "lat": "30.298862514807027",
+    "lon": "-97.6717983847666",
+    "node_weight": "0.631007295137521",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "41",
+    "site_id": "CA_013",
+    "lat": "30.286828625214948",
+    "lon": "-97.76809009633703",
+    "node_weight": "0.5335637393440548",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "42",
+    "site_id": "CA_014",
+    "lat": "30.364813761697803",
+    "lon": "-97.6783079303635",
+    "node_weight": "0.4837327089990656",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "43",
+    "site_id": "CA_016",
+    "lat": "30.377105215556444",
+    "lon": "-97.79778537912021",
+    "node_weight": "0.5920150888146439",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "44",
+    "site_id": "CA_017",
+    "lat": "30.288650342663693",
+    "lon": "-97.84392809269274",
+    "node_weight": "0.44573707279639396",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "45",
+    "site_id": "CA_018",
+    "lat": "30.373777539640955",
+    "lon": "-97.7020734576345",
+    "node_weight": "0.3432775689919296",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "46",
+    "site_id": "CA_019",
+    "lat": "30.111777426396465",
+    "lon": "-97.72027076500139",
+    "node_weight": "0.5550824970146984",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "47",
+    "site_id": "CA_020",
+    "lat": "30.28288208377351",
+    "lon": "-97.76430603114565",
+    "node_weight": "0.48424043559909674",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "48",
+    "site_id": "CA_021",
+    "lat": "30.352051617959862",
+    "lon": "-97.77571464057374",
+    "node_weight": "0.3455947689154586",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "49",
+    "site_id": "CA_022",
+    "lat": "30.21753683517005",
+    "lon": "-97.81857379896122",
+    "node_weight": "0.3347434274356116",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  },
+  {
+    "rank": "50",
+    "site_id": "CA_023",
+    "lat": "30.245614323871266",
+    "lon": "-97.6925082382664",
+    "node_weight": "0.48459936985521057",
+    "marginal_demand_gain": "0.0",
+    "cumulative_coverage": "1.0"
+  }
+]
