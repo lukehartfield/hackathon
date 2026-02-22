@@ -2,15 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import type { ScoredStation, Recommendation } from '@/lib/types';
+import type { ActiveTab, ScoredStation, Recommendation } from '@/lib/types';
 import { parseRecommendations } from '@/lib/geojson';
-import NodesTab from '@/components/tabs/NodesTab';
+import TabPanel from '@/components/TabPanel';
 
 const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
   const [stations, setStations] = useState<ScoredStation[]>([]);
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [narrative, setNarrative] = useState('');
+  const [coverageBefore, setCoverageBefore] = useState(67);
+  const [coverageAfter, setCoverageAfter] = useState(89);
+  const [isInsightsLoading, setIsInsightsLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -35,6 +40,38 @@ export default function Home() {
       .catch(() => setRecommendations([]));
   }, []);
 
+  const runOptimizationDemo = async () => {
+    if (isInsightsLoading) return;
+    setIsInsightsLoading(true);
+    setActiveTab('ai');
+
+    try {
+      const [res] = await Promise.all([
+        fetch('/api/insights', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stations, recommendations }),
+        }),
+        new Promise(resolve => setTimeout(resolve, 2200)),
+      ]);
+      const data = await res.json();
+      setNarrative(data.narrative ?? '');
+      setCoverageBefore(data.coverageBefore ?? 67);
+      setCoverageAfter(data.coverageAfter ?? 89);
+    } catch {
+      setNarrative('Unable to generate AI narrative. Demo can proceed with ranked recommendations and station utilization insights.');
+    } finally {
+      setIsInsightsLoading(false);
+    }
+  };
+
+  const flyToRecommendation = (rec: Recommendation) => {
+    const fly = (window as any).__flyToStation;
+    if (typeof fly === 'function') {
+      fly(rec.lat, rec.lng);
+    }
+  };
+
   const scores = stations.map(s => s.optimizationScore).sort((a, b) => a - b);
   const percentile = (p: number) => {
     if (!scores.length) return 0;
@@ -51,6 +88,9 @@ export default function Home() {
   const greenCount = stations.filter(s => s.optimizationScore >= p90).length;
   const yellowCount = Math.max(0, stations.length - redCount - greenCount);
   const totalPoints = stations.reduce((sum, s) => sum + s.chargerCount, 0);
+  const avgUtilization = stations.length
+    ? Math.round(stations.reduce((sum, s) => sum + s.utilization, 0) / stations.length)
+    : 0;
 
   return (
     <div className="h-screen w-screen relative overflow-hidden">
@@ -68,25 +108,28 @@ export default function Home() {
       </div>
 
       {/* ── Map ─────────────────────────────────────── */}
-      <MapView stations={stations} recommendations={recommendations} />
+      <MapView
+        stations={stations}
+        recommendations={activeTab === 'nodes' || activeTab === 'ai' ? recommendations : []}
+      />
 
       {/* ── Header Overlay ──────────────────────────── */}
       <div className="absolute top-0 left-0 right-0 z-[1000] pointer-events-none">
         <div className="flex items-center justify-between px-5 py-3">
-          {/* Brand */}
-          <div className="glass-strong rounded-xl px-5 py-3 glow-border pointer-events-auto animate-fade-in">
-            <div className="flex items-center gap-3">
-              <span className="font-display text-xl font-bold tracking-tight text-accent">
+          <div className="glass-strong rounded-xl px-4 py-3 glow-border pointer-events-auto animate-fade-in max-w-[520px]">
+            <div className="flex items-center gap-2.5">
+              <span className="text-xl font-bold tracking-tight text-accent">
                 ⚡ CHARGEPILOT
               </span>
-              <div className="w-px h-6 bg-border" />
-              <span className="text-sm text-[var(--text-secondary)] font-body">
-                Austin, TX
+              <span className="text-xs px-2 py-1 rounded-full bg-[var(--accent-dim)] text-accent border border-[var(--border)]">
+                Live Demo
               </span>
             </div>
+            <p className="text-xs text-[var(--text-secondary)] mt-1">
+              Graph-optimized EV expansion recommendations for Austin, TX.
+            </p>
           </div>
 
-          {/* Live Stats */}
           <div
             className="glass-strong rounded-xl px-4 py-2.5 glow-border pointer-events-auto animate-fade-in"
             style={{ animationDelay: '0.1s' }}
@@ -145,20 +188,76 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── Top 10 Recommendations ───────────────────── */}
-      <div className="absolute top-20 right-5 z-[1000] w-[320px] pointer-events-none">
-        <div className="glass-strong rounded-xl glow-border pointer-events-auto animate-slide-up">
-          <NodesTab
+      {/* ── Demo Script ──────────────────────────────── */}
+      <div className="absolute top-24 left-5 z-[1000] w-[360px] pointer-events-none">
+        <div className="glass-strong rounded-xl glow-border p-4 pointer-events-auto animate-slide-up">
+          <div className="text-[10px] uppercase tracking-widest text-[var(--text-muted)] mb-2">
+            Talk Track
+          </div>
+          <p className="text-sm text-[var(--text-primary)] mb-3">
+            Start with current network stress, then show optimized nodes and finish with AI narrative.
+          </p>
+          <div className="grid grid-cols-2 gap-2 text-xs mb-3">
+            <button
+              onClick={() => setActiveTab('overview')}
+              className="px-3 py-2 rounded-lg bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] transition-colors border border-[var(--border)]"
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setActiveTab('congestion')}
+              className="px-3 py-2 rounded-lg bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] transition-colors border border-[var(--border)]"
+            >
+              Congestion
+            </button>
+            <button
+              onClick={() => setActiveTab('nodes')}
+              className="px-3 py-2 rounded-lg bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] transition-colors border border-[var(--border)]"
+            >
+              Suggested Nodes
+            </button>
+            <button
+              onClick={() => runOptimizationDemo()}
+              disabled={isInsightsLoading}
+              className="px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 transition-colors border border-blue-400/30"
+            >
+              {isInsightsLoading ? 'Computing...' : 'Run Demo'}
+            </button>
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            <MetricChip label="Avg Util" value={`${avgUtilization}%`} />
+            <MetricChip label="Top Sites" value={recommendations.length} />
+            <MetricChip label="Points" value={totalPoints} />
+          </div>
+        </div>
+      </div>
+
+      {/* ── Right Control Panel ──────────────────────── */}
+      <div className="absolute top-20 right-5 bottom-5 z-[1000] w-[360px] pointer-events-none">
+        <div className="h-full glass-strong rounded-xl glow-border pointer-events-auto animate-slide-up">
+          <TabPanel
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            stations={stations}
             recommendations={recommendations}
-            onSelect={(rec) => {
-              const fly = (window as any).__flyToStation;
-              if (typeof fly === 'function') {
-                fly(rec.lat, rec.lng);
-              }
-            }}
+            narrative={narrative}
+            coverageBefore={coverageBefore}
+            coverageAfter={coverageAfter}
+            isInsightsLoading={isInsightsLoading}
+            onRunOptimization={runOptimizationDemo}
+            onSelectRecommendation={flyToRecommendation}
           />
         </div>
       </div>
+    </div>
+  );
+}
+
+function MetricChip({ label, value }: { label: string; value: string | number }) {
+  return (
+    <div className="rounded-lg bg-[var(--bg-card)] border border-[var(--border)] px-2 py-1.5">
+      <div className="text-[10px] uppercase tracking-wide text-[var(--text-muted)]">{label}</div>
+      <div className="text-sm font-semibold text-[var(--text-primary)]">{value}</div>
     </div>
   );
 }

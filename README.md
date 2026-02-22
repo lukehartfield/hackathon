@@ -117,6 +117,22 @@ The pipeline produces these artifacts:
 
 ---
 
+## Demo Video
+
+A 2-minute animated walkthrough built with [Remotion](https://www.remotion.dev/):
+
+**[Watch the demo video](video/out/demo.mp4)**
+
+To re-render or customize:
+
+```bash
+cd video && npm install
+npm run studio   # Preview in browser
+npm run build    # Render to video/out/demo.mp4
+```
+
+---
+
 ## Frontend -- ChargePilot Dashboard
 
 A Next.js 14 app renders the full network on an interactive dark-themed Leaflet map.

@@ -23,23 +23,24 @@ interface TabPanelProps {
   coverageAfter: number;
   isInsightsLoading: boolean;
   onRunOptimization: () => void;
+  onSelectRecommendation?: (rec: Recommendation) => void;
 }
 
 export default function TabPanel({
   activeTab, onTabChange, stations, recommendations,
-  narrative, coverageBefore, coverageAfter, isInsightsLoading, onRunOptimization,
+  narrative, coverageBefore, coverageAfter, isInsightsLoading, onRunOptimization, onSelectRecommendation,
 }: TabPanelProps) {
   return (
-    <div className="flex flex-col h-full bg-gray-900 border-l border-gray-700">
-      <div className="flex border-b border-gray-700">
+    <div className="flex flex-col h-full">
+      <div className="flex border-b border-[var(--border)]">
         {TABS.map(t => (
           <button
             key={t.id}
             onClick={() => onTabChange(t.id)}
             className={`flex-1 px-2 py-3 text-xs font-medium transition-colors ${
               activeTab === t.id
-                ? 'text-white border-b-2 border-blue-500 bg-gray-800'
-                : 'text-gray-400 hover:text-white'
+                ? 'text-white border-b-2 border-blue-500 bg-[var(--bg-card)]'
+                : 'text-[var(--text-secondary)] hover:text-white'
             }`}
           >
             {t.label}
@@ -50,7 +51,9 @@ export default function TabPanel({
       <div className="flex-1 overflow-y-auto">
         {activeTab === 'overview' && <OverviewTab stations={stations} />}
         {activeTab === 'congestion' && <CongestionTab stations={stations} />}
-        {activeTab === 'nodes' && <NodesTab recommendations={recommendations} />}
+        {activeTab === 'nodes' && (
+          <NodesTab recommendations={recommendations} onSelect={onSelectRecommendation} />
+        )}
         {activeTab === 'ai' && (
           <AITab
             narrative={narrative}
@@ -61,13 +64,13 @@ export default function TabPanel({
         )}
       </div>
 
-      <div className="p-4 border-t border-gray-700">
+      <div className="p-4 border-t border-[var(--border)]">
         <button
           onClick={onRunOptimization}
           disabled={isInsightsLoading}
-          className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-500 text-white font-semibold rounded-lg transition-colors"
+          className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-400 text-white font-semibold rounded-lg transition-colors"
         >
-          {isInsightsLoading ? 'Computing...' : 'Run Optimization'}
+          {isInsightsLoading ? 'Computing Scenario...' : 'Run Optimization Demo'}
         </button>
       </div>
     </div>
